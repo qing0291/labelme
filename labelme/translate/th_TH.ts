@@ -262,10 +262,6 @@
         <translation>บันทึกเป็น (&amp;S)</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>บันทึกเลเบลไปยังไฟล์อื่น</translation>
-    </message>
-    <message>
         <source>&amp;Delete File</source>
         <translation>ลบไฟล์ (&amp;D)</translation>
     </message>
@@ -358,22 +354,6 @@
         <translation>สร้างสำเนารูปร่างที่เลือก</translation>
     </message>
     <message>
-        <source>Copy Shapes</source>
-        <translation>คัดลอกรูปร่าง</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>คัดลอกรูปร่างที่เลือกไปคลิปบอร์ด</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>วางรูปร่าง</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>วางรูปร่างที่คัดลอก</translation>
-    </message>
-    <message>
         <source>Undo last point</source>
         <translation>ยกเลิกจุดล่าสุด</translation>
     </message>
@@ -438,40 +418,8 @@ Shapes</source>
         <translation>ซูมเข้า (&amp;I)</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>เพิ่มระดับซูม</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>ซูมออก (&amp;Z)</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>ลดระดับซูม</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>ขนาดจริง (&amp;O)</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>ซูมเป็นขนาดจริง</translation>
-    </message>
-    <message>
-        <source>&amp;Fit Window</source>
-        <translation>พอดีหน้าต่าง (&amp;F)</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>ซูมตามขนาดหน้าต่าง</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>พอดีความกว้าง (&amp;W)</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>ซูมตามความกว้างหน้าต่าง</translation>
     </message>
     <message>
         <source>&amp;Brightness Contrast</source>
@@ -486,14 +434,70 @@ Shapes</source>
         <translation>แก้ไขเลเบล (&amp;E)</translation>
     </message>
     <message>
+        <source>Save the labels under a new file name</source>
+        <translation>บันทึกเลเบลด้วยชื่อไฟล์ใหม่</translation>
+    </message>
+    <message>
         <source>Modify the label of the selected shape</source>
         <translation>แก้ไขเลเบลของรูปร่างที่เลือก</translation>
+    </message>
+    <message>
+        <source>Copy to Clipboard</source>
+        <translation>คัดลอกไปคลิปบอร์ด</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>วางรูปร่างที่เลือกไว้ในคลิปบอร์ด</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>วางจากคลิปบอร์ด</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>แทรกรูปร่างจากคลิปบอร์ดลงในภาพนี้</translation>
     </message>
     <message>
         <source>Hand
 </source>
         <translation>มือ
 </translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>ลากด้วยปุ่มซ้ายเพื่อเลื่อนภาพ โดยไม่แก้ไขรูปร่าง</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>พอดีหน้าต่าง (&amp;W)</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>แสดงภาพทั้งภาพให้เห็นตลอดเมื่อปรับขนาดหน้าต่าง</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>พอดีความกว้าง (&amp;D)</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>ปรับความกว้างของภาพให้เท่ากับหน้าต่างเมื่อปรับขนาดหน้าต่าง</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>แสดงภาพให้ใหญ่ขึ้น</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>แสดงภาพให้เล็กลง</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>ขนาด&amp;จริง</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>แสดงภาพที่ 100%</translation>
     </message>
     <message>
         <source>Fill Drawing Polygon</source>
@@ -658,10 +662,6 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Polygon</source>
         <translation>หลายเหลี่ยม</translation>
-    </message>
-    <message>
-        <source>Drag with the left button to pan, without editing shapes</source>
-        <translation>ลากด้วยปุ่มซ้ายเพื่อเลื่อนภาพ โดยไม่แก้ไขรูปร่าง</translation>
     </message>
     <message>
         <source>Rectangle</source>

@@ -262,10 +262,6 @@
         <translation>Opslaan &amp;als</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>Labels opslaan naar ander bestand</translation>
-    </message>
-    <message>
         <source>&amp;Delete File</source>
         <translation>Bestand &amp;verwijderen</translation>
     </message>
@@ -358,22 +354,6 @@
         <translation>Maak een duplicaat van de geselecteerde vormen</translation>
     </message>
     <message>
-        <source>Copy Shapes</source>
-        <translation>Vormen Kopiëren</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>Geselecteerde vormen naar klembord kopiëren</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>Vormen Plakken</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>Gekopieerde vormen plakken</translation>
-    </message>
-    <message>
         <source>Undo last point</source>
         <translation>Laatste punt ongedaan maken</translation>
     </message>
@@ -438,40 +418,8 @@ Shapes</source>
         <translation>&amp;Inzoomen</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>Zoomniveau verhogen</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>&amp;Uitzoomen</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>Zoomniveau verlagen</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>&amp;Originele grootte</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>Zoomen naar originele grootte</translation>
-    </message>
-    <message>
-        <source>&amp;Fit Window</source>
-        <translation>Aanpassen aan &amp;venster</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>Zoom volgt venstergrootte</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>Aanpassen aan &amp;breedte</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>Zoom volgt vensterbreedte</translation>
     </message>
     <message>
         <source>&amp;Brightness Contrast</source>
@@ -486,14 +434,70 @@ Shapes</source>
         <translation>Label &amp;bewerken</translation>
     </message>
     <message>
+        <source>Save the labels under a new file name</source>
+        <translation>Labels opslaan onder een nieuwe bestandsnaam</translation>
+    </message>
+    <message>
         <source>Modify the label of the selected shape</source>
         <translation>Label van geselecteerde vorm wijzigen</translation>
+    </message>
+    <message>
+        <source>Copy to Clipboard</source>
+        <translation>Naar Klembord Kopiëren</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>Geselecteerde vormen op het klembord plaatsen</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>Vanaf Klembord Plakken</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>Vormen van het klembord in deze afbeelding invoegen</translation>
     </message>
     <message>
         <source>Hand
 </source>
         <translation>Hand
 </translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Sleep met de linkerknop om te verschuiven, zonder vormen te bewerken</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>Aanpassen aan &amp;venster</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>De hele afbeelding zichtbaar houden wanneer het venster van grootte verandert</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>Aanpassen aan &amp;breedte</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>De breedte van de afbeelding gelijk houden aan het venster wanneer het van grootte verandert</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>De afbeelding groter weergeven</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>De afbeelding kleiner weergeven</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>&amp;Werkelijke grootte</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>De afbeelding op 100% weergeven</translation>
     </message>
     <message>
         <source>Fill Drawing Polygon</source>
@@ -658,10 +662,6 @@ Wijzig het AI Text-to-Annotation-model naar &apos;SAM3 (smart)&apos; of stel het
     <message>
         <source>Polygon</source>
         <translation>Polygoon</translation>
-    </message>
-    <message>
-        <source>Drag with the left button to pan, without editing shapes</source>
-        <translation>Sleep met de linkerknop om te verschuiven, zonder vormen te bewerken</translation>
     </message>
     <message>
         <source>Rectangle</source>

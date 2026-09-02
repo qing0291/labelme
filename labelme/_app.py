@@ -128,9 +128,9 @@ class _Actions(NamedTuple):
     toggle_keep_prev_brightness_contrast: QtGui.QAction
     delete: QtGui.QAction
     edit: QtGui.QAction
-    duplicate: QtGui.QAction
     copy: QtGui.QAction
     paste: QtGui.QAction
+    duplicate: QtGui.QAction
     undo_last_point: QtGui.QAction
     undo: QtGui.QAction
     add_point_to_edge: QtGui.QAction
@@ -167,7 +167,7 @@ class _Actions(NamedTuple):
     on_load_active: tuple[QtGui.QAction, ...]
     on_shapes_present: tuple[QtGui.QAction, ...]
     context_menu: tuple[QtGui.QAction, ...]
-    edit_menu: tuple[QtGui.QAction | None, ...]
+    edit_menu: tuple[QtGui.QAction, ...]
 
 
 class _Menus(NamedTuple):
@@ -324,6 +324,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def _setup_actions(self) -> _Actions:
         action = functools.partial(_utils.new_action, self)
+        separator = functools.partial(_utils.new_separator, self)
         shortcuts = self._config["shortcuts"]
 
         about = action(
@@ -362,7 +363,7 @@ class MainWindow(QtWidgets.QMainWindow):
             slot=lambda: self._save_label_file(save_as=True),
             shortcut=shortcuts["save_as"],
             icon="phosphor/floppy-disk.svg",
-            tip=self.tr("Save labels to a different file"),
+            tip=self.tr("Save the labels under a new file name"),
             enabled=False,
         )
         save_auto = action(
@@ -442,6 +443,24 @@ class MainWindow(QtWidgets.QMainWindow):
             tip=self.tr("Modify the label of the selected shape"),
             enabled=False,
         )
+        copy = action(
+            text=self.tr("Copy to Clipboard"),
+            slot=lambda: self._shape_clipboard.store(
+                shapes=self._canvas_widgets.canvas.selected_shapes
+            ),
+            shortcut=shortcuts["copy_shape"],
+            icon="copy_clipboard",
+            tip=self.tr("Place the selected shapes on the clipboard"),
+            enabled=False,
+        )
+        paste = action(
+            text=self.tr("Paste from Clipboard"),
+            slot=lambda: self._insert_shapes(self._shape_clipboard.paste()),
+            shortcut=shortcuts["paste_shape"],
+            icon="paste",
+            tip=self.tr("Insert the clipboard shapes into this image"),
+            enabled=False,
+        )
         duplicate = action(
             text=self.tr("Duplicate Shapes"),
             slot=lambda: self._insert_shapes(
@@ -450,24 +469,6 @@ class MainWindow(QtWidgets.QMainWindow):
             shortcut=shortcuts["duplicate_shape"],
             icon="phosphor/copy.svg",
             tip=self.tr("Create a duplicate of the selected shapes"),
-            enabled=False,
-        )
-        copy = action(
-            text=self.tr("Copy Shapes"),
-            slot=lambda: self._shape_clipboard.store(
-                shapes=self._canvas_widgets.canvas.selected_shapes
-            ),
-            shortcut=shortcuts["copy_shape"],
-            icon="copy_clipboard",
-            tip=self.tr("Copy selected shapes to clipboard"),
-            enabled=False,
-        )
-        paste = action(
-            text=self.tr("Paste Shapes"),
-            slot=lambda: self._insert_shapes(self._shape_clipboard.paste()),
-            shortcut=shortcuts["paste_shape"],
-            icon="paste",
-            tip=self.tr("Paste copied shapes"),
             enabled=False,
         )
         undo_last_point = action(
@@ -622,20 +623,20 @@ class MainWindow(QtWidgets.QMainWindow):
             checked=self._config["keep_prev_scale"],
         )
         fit_window = action(
-            text=self.tr("&Fit Window"),
+            text=self.tr("Fit to &Window"),
             slot=self.set_fit_window_mode,
             shortcut=shortcuts["fit_window"],
             icon="phosphor/frame-corners.svg",
-            tip=self.tr("Zoom follows window size"),
+            tip=self.tr("Keep the whole image visible when the window is resized"),
             checkable=True,
             enabled=False,
         )
         fit_width = action(
-            text=self.tr("Fit &Width"),
+            text=self.tr("Fit to Wi&dth"),
             slot=self.set_fit_width_mode,
             shortcut=shortcuts["fit_width"],
             icon="frame-arrows-horizontal.svg",
-            tip=self.tr("Zoom follows window width"),
+            tip=self.tr("Match the image width to the window when it is resized"),
             checkable=True,
             enabled=False,
         )
@@ -652,7 +653,7 @@ class MainWindow(QtWidgets.QMainWindow):
             slot=lambda _: self._add_zoom(increment=1.1, pos=None),
             shortcut=shortcuts["zoom_in"],
             icon="phosphor/magnifying-glass-plus.svg",
-            tip=self.tr("Increase zoom level"),
+            tip=self.tr("Make the image appear larger"),
             enabled=False,
         )
         zoom_out = action(
@@ -660,15 +661,15 @@ class MainWindow(QtWidgets.QMainWindow):
             slot=lambda _: self._add_zoom(increment=0.9, pos=None),
             shortcut=shortcuts["zoom_out"],
             icon="phosphor/magnifying-glass-minus.svg",
-            tip=self.tr("Decrease zoom level"),
+            tip=self.tr("Make the image appear smaller"),
             enabled=False,
         )
         zoom_org = action(
-            text=self.tr("&Original size"),
+            text=self.tr("&Actual Size"),
             slot=self._set_zoom_to_original,
             shortcut=shortcuts["zoom_to_original"],
             icon="phosphor/image-square.svg",
-            tip=self.tr("Zoom to original size"),
+            tip=self.tr("Show the image at 100%"),
             enabled=False,
         )
         reset_layout = action(
@@ -766,31 +767,33 @@ class MainWindow(QtWidgets.QMainWindow):
             brightness_contrast,
         )
         on_shapes_present = (save_as, hide_all, show_all, toggle_all)
+        # Both menus follow the platform Edit-menu convention: history first,
+        # then the clipboard group, then the actions that alter a shape.
+        history = (undo, undo_last_point)
+        clipboard = (copy, paste, duplicate)
         context_menu = (
             *[draw_action for _, draw_action in draw],
             edit_mode,
+            separator(),
+            *history,
+            separator(),
+            *clipboard,
+            separator(),
             edit,
-            duplicate,
-            copy,
-            paste,
             delete,
-            undo,
-            undo_last_point,
             add_point_to_edge,
             remove_point,
         )
         edit_menu = (
+            separator(),
+            *history,
+            separator(),
+            *clipboard,
+            separator(),
             edit,
-            duplicate,
-            copy,
-            paste,
             delete,
-            None,
-            undo,
-            undo_last_point,
-            None,
             remove_point,
-            None,
+            separator(),
             hand,
             keep_prev_action,
         )
@@ -808,9 +811,9 @@ class MainWindow(QtWidgets.QMainWindow):
             toggle_keep_prev_brightness_contrast=toggle_keep_prev_brightness_contrast,
             delete=delete,
             edit=edit,
-            duplicate=duplicate,
             copy=copy,
             paste=paste,
+            duplicate=duplicate,
             undo_last_point=undo_last_point,
             undo=undo,
             remove_point=remove_point,
@@ -852,6 +855,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def _setup_menus(self) -> _Menus:
         action = functools.partial(_utils.new_action, self)
+        separator = functools.partial(_utils.new_separator, self)
         shortcuts = self._config["shortcuts"]
 
         quit_ = action(
@@ -882,14 +886,12 @@ class MainWindow(QtWidgets.QMainWindow):
             tip=self.tr("Show tutorial page"),
         )
 
-        file_menu = self.menu(self.tr("&File"))
-        edit_menu = self.menu(self.tr("&Edit"))
-        view_menu = self.menu(self.tr("&View"))
-        help_menu = self.menu(self.tr("&Help"))
+        file_menu = self.menuBar().addMenu(self.tr("&File"))
+        edit_menu = self.menuBar().addMenu(self.tr("&Edit"))
+        view_menu = self.menuBar().addMenu(self.tr("&View"))
+        help_menu = self.menuBar().addMenu(self.tr("&Help"))
         label_menu = QtWidgets.QMenu()
-        _utils.add_actions(
-            widget=label_menu, actions=(self._actions.edit, self._actions.delete)
-        )
+        label_menu.addActions((self._actions.edit, self._actions.delete))
         self._docks.label_list.setContextMenuPolicy(
             Qt.ContextMenuPolicy.CustomContextMenu
         )
@@ -897,9 +899,8 @@ class MainWindow(QtWidgets.QMainWindow):
             self.show_label_list_menu
         )
 
-        _utils.add_actions(
-            widget=file_menu,
-            actions=(
+        file_menu.addActions(
+            (
                 self._actions.open,
                 self._actions.open_next_img,
                 self._actions.open_prev_img,
@@ -911,52 +912,49 @@ class MainWindow(QtWidgets.QMainWindow):
                 self._actions.save_with_image_data,
                 self._actions.close,
                 self._actions.delete_file,
-                None,
+                separator(),
                 open_config,
-                None,
+                separator(),
                 quit_,
-            ),
+            )
         )
-        _utils.add_actions(widget=help_menu, actions=(help_, self._actions.about))
-        _utils.add_actions(
-            widget=view_menu,
-            actions=(
+        help_menu.addActions((help_, self._actions.about))
+        view_menu.addActions(
+            (
                 self._docks.flag_dock.toggleViewAction(),
                 self._docks.label_dock.toggleViewAction(),
                 self._docks.shape_dock.toggleViewAction(),
                 self._docks.file_dock.toggleViewAction(),
-                None,
+                separator(),
                 self._actions.reset_layout,
-                None,
+                separator(),
                 self._actions.fill_drawing,
-                None,
+                separator(),
                 self._actions.hide_all,
                 self._actions.show_all,
                 self._actions.toggle_all,
-                None,
+                separator(),
                 self._actions.zoom_in,
                 self._actions.zoom_out,
                 self._actions.zoom_org,
                 self._actions.keep_prev_zoom,
-                None,
+                separator(),
                 self._actions.fit_window,
                 self._actions.fit_width,
-                None,
+                separator(),
                 self._actions.brightness_contrast,
                 self._actions.toggle_keep_prev_brightness_contrast,
-            ),
+            )
         )
 
-        _utils.add_actions(
-            widget=self._canvas_widgets.canvas.context_menus.without_selection,
-            actions=self._actions.context_menu,
+        self._canvas_widgets.canvas.context_menus.without_selection.addActions(
+            self._actions.context_menu
         )
-        _utils.add_actions(
-            widget=self._canvas_widgets.canvas.context_menus.with_selection,
-            actions=(
+        self._canvas_widgets.canvas.context_menus.with_selection.addActions(
+            (
                 action(text="&Copy here", slot=self.copy_shape),
                 action(text="&Move here", slot=self.move_shape),
-            ),
+            )
         )
 
         return _Menus(
@@ -968,6 +966,7 @@ class MainWindow(QtWidgets.QMainWindow):
         )
 
     def _setup_toolbars(self) -> None:
+        separator = functools.partial(_utils.new_separator, self)
         select_ai_model = QtWidgets.QWidgetAction(self)
         select_ai_model.setDefaultWidget(self._ai_annotation)
 
@@ -985,19 +984,19 @@ class MainWindow(QtWidgets.QMainWindow):
                     self._actions.open_next_img,
                     self._actions.save,
                     self._actions.delete_file,
-                    None,
+                    separator(),
                     self._actions.edit_mode,
                     self._actions.hand,
                     self._actions.duplicate,
                     self._actions.delete,
                     self._actions.undo,
                     self._actions.brightness_contrast,
-                    None,
+                    separator(),
                     self._actions.fit_window,
                     self._actions.zoom_widget_action,
-                    None,
+                    separator(),
                     select_ai_model,
-                    None,
+                    separator(),
                     ai_prompt_action,
                 ],
                 font_base=self.font(),
@@ -1013,7 +1012,7 @@ class MainWindow(QtWidgets.QMainWindow):
                         for mode, a in self._actions.draw
                         if not mode.startswith("ai_")
                     ],
-                    None,
+                    separator(),
                     *[a for mode, a in self._actions.draw if mode.startswith("ai_")],
                 ],
                 orientation=Qt.Orientation.Vertical,
@@ -1296,18 +1295,6 @@ class MainWindow(QtWidgets.QMainWindow):
             )
         return config_file, config
 
-    def menu(
-        self,
-        title: str,
-        /,
-        *,
-        actions: tuple[QtGui.QAction | QtWidgets.QMenu | None, ...] | None = None,
-    ) -> QtWidgets.QMenu:
-        menu = self.menuBar().addMenu(title)
-        if actions:
-            _utils.add_actions(widget=menu, actions=actions)
-        return menu
-
     # Support Functions
 
     def has_no_shapes(self) -> bool:
@@ -1315,9 +1302,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def populate_mode_actions(self) -> None:
         self._canvas_widgets.canvas.context_menus.without_selection.clear()
-        _utils.add_actions(
-            widget=self._canvas_widgets.canvas.context_menus.without_selection,
-            actions=self._actions.context_menu,
+        self._canvas_widgets.canvas.context_menus.without_selection.addActions(
+            self._actions.context_menu
         )
         self._menus.edit.clear()
         actions = (
@@ -1325,7 +1311,7 @@ class MainWindow(QtWidgets.QMainWindow):
             self._actions.edit_mode,
             *self._actions.edit_menu,
         )
-        _utils.add_actions(widget=self._menus.edit, actions=actions)
+        self._menus.edit.addActions(actions)
 
     def _get_window_title(self, *, dirty: bool) -> str:
         file_list = self._docks.file_list

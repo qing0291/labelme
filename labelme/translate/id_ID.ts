@@ -257,10 +257,6 @@
         <translation>&amp;Simpan Sebagai</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>Simpan label ke file yang berbeda</translation>
-    </message>
-    <message>
         <source>&amp;Delete File</source>
         <translation>Hapus File (&amp;D)</translation>
     </message>
@@ -353,22 +349,6 @@
         <translation>Buat duplikat dari bentuk terpilih</translation>
     </message>
     <message>
-        <source>Copy Shapes</source>
-        <translation>Salin Bentuk</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>Salin bentuk terpilih ke clipboard</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>Tempel Bentuk</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>Tempel bentuk yang disalin</translation>
-    </message>
-    <message>
         <source>Undo last point</source>
         <translation>Urungkan titik terakhir</translation>
     </message>
@@ -413,40 +393,8 @@
         <translation>Perbesar (&amp;I)</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>Tingkatkan level zoom</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>Perkecil (&amp;Z)</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>Kurangi level zoom</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>Ukuran &amp;Original</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>Zoom ke ukuran original</translation>
-    </message>
-    <message>
-        <source>&amp;Fit Window</source>
-        <translation>Sesuaikan Jendela (&amp;F)</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>Zoom menyesuaikan ukuran jendela</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>Sesuaikan Lebar (&amp;W)</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>Zoom menyesuaikan lebar jendela</translation>
     </message>
     <message>
         <source>&amp;Brightness Contrast</source>
@@ -461,14 +409,70 @@
         <translation>&amp;Edit Label</translation>
     </message>
     <message>
+        <source>Save the labels under a new file name</source>
+        <translation>Simpan label dengan nama file baru</translation>
+    </message>
+    <message>
         <source>Modify the label of the selected shape</source>
         <translation>Ubah label bentuk yang dipilih</translation>
+    </message>
+    <message>
+        <source>Copy to Clipboard</source>
+        <translation>Salin ke Clipboard</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>Letakkan bentuk terpilih di clipboard</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>Tempel dari Clipboard</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>Sisipkan bentuk dari clipboard ke gambar ini</translation>
     </message>
     <message>
         <source>Hand
 </source>
         <translation>Tangan
 </translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Seret dengan tombol kiri untuk menggeser, tanpa mengedit bentuk</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>Sesuaikan Jendela (&amp;W)</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>Menjaga seluruh gambar tetap terlihat saat ukuran jendela berubah</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>Sesuaikan Lebar (&amp;D)</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>Menyamakan lebar gambar dengan jendela saat ukurannya berubah</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>Menampilkan gambar lebih besar</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>Menampilkan gambar lebih kecil</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>Ukuran &amp;Asli</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>Menampilkan gambar pada 100%</translation>
     </message>
     <message>
         <source>Fill Drawing Polygon</source>
@@ -633,10 +637,6 @@ Ganti model AI Text-to-Annotation ke &apos;SAM3 (smart)&apos;, atau atur format 
     <message>
         <source>Polygon</source>
         <translation>Poligon</translation>
-    </message>
-    <message>
-        <source>Drag with the left button to pan, without editing shapes</source>
-        <translation>Seret dengan tombol kiri untuk menggeser, tanpa mengedit bentuk</translation>
     </message>
     <message>
         <source>Rectangle</source>

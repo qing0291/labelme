@@ -264,10 +264,6 @@
         <translation>Mentés &amp;másként</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>Címkék mentése másik fájlba</translation>
-    </message>
-    <message>
         <source>&amp;Delete File</source>
         <translation>&amp;Fájl törlése</translation>
     </message>
@@ -320,6 +316,12 @@
         <translation>Sokszögek rajzolásának megkezdése</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>Kéz
+</translation>
+    </message>
+    <message>
         <source>Drag with the left button to pan, without editing shapes</source>
         <translation>Húzza a bal gombbal a mozgatáshoz, alakzatok szerkesztése nélkül</translation>
     </message>
@@ -366,22 +368,6 @@
     <message>
         <source>Create a duplicate of the selected shapes</source>
         <translation>A kijelölt alakzatok másolatának létrehozása</translation>
-    </message>
-    <message>
-        <source>Copy Shapes</source>
-        <translation>Alakzatok másolása</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>Kijelölt alakzatok másolása a vágólapra</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>Alakzatok beillesztése</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>Másolt alakzatok beillesztése</translation>
     </message>
     <message>
         <source>Undo last point</source>
@@ -452,40 +438,8 @@ Shapes</source>
         <translation>&amp;Nagyítás</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>Nagyítási szint növelése</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>&amp;Kicsinyítés</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>Nagyítási szint csökkentése</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>&amp;Eredeti méret</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>Nagyítás eredeti méretre</translation>
-    </message>
-    <message>
-        <source>&amp;Fit Window</source>
-        <translation>&amp;Ablakhoz igazítás</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>A nagyítás követi az ablak méretét</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>&amp;Szélességhez igazítás</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>A nagyítás követi az ablak szélességét</translation>
     </message>
     <message>
         <source>&amp;Brightness Contrast</source>
@@ -516,10 +470,56 @@ Shapes</source>
         <translation>Előző fényerő/kontraszt megtartása</translation>
     </message>
     <message>
-        <source>Hand
-</source>
-        <translation>Kéz
-</translation>
+        <source>Save the labels under a new file name</source>
+        <translation>Címkék mentése új fájlnéven</translation>
+    </message>
+    <message>
+        <source>Copy to Clipboard</source>
+        <translation>Másolás a vágólapra</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>A kijelölt alakzatok vágólapra helyezése</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>Beillesztés a vágólapról</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>A vágólap alakzatainak beszúrása ebbe a képbe</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>&amp;Ablakhoz igazítás</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>A teljes kép látható marad az ablak átméretezésekor</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>&amp;Szélességhez igazítás</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>A kép szélessége az ablakhoz igazodik annak átméretezésekor</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>A kép nagyobb megjelenítése</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>A kép kisebb megjelenítése</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>&amp;Tényleges méret</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>A kép megjelenítése 100%-on</translation>
     </message>
     <message>
         <source>&amp;File</source>

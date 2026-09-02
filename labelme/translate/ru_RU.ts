@@ -252,10 +252,6 @@
         <translation>Сохранить как</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>Сохранить метки в другой файл</translation>
-    </message>
-    <message>
         <source>&amp;Delete File</source>
         <translation>Удалить файл (&amp;D)</translation>
     </message>
@@ -348,22 +344,6 @@
         <translation>Создать копию выбранных фигур</translation>
     </message>
     <message>
-        <source>Copy Shapes</source>
-        <translation>Копировать фигуры</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>Копировать выбранные фигуры в буфер обмена</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>Вставить фигуры</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>Вставить скопированные фигуры</translation>
-    </message>
-    <message>
         <source>Undo last point</source>
         <translation>Отменить последнюю точку</translation>
     </message>
@@ -423,40 +403,8 @@ Shapes</source>
         <translation>Увеличить (&amp;I)</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>Увеличить уровень масштаба</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>Уменьшить (&amp;Z)</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>Уменьшить уровень масштаба</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>&amp;Исходный размер</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>Вернуть исходный размер</translation>
-    </message>
-    <message>
-        <source>&amp;Fit Window</source>
-        <translation>По размеру окна</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>Масштаб подстраивается под размер окна</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>По &amp;ширине</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>Масштаб подстраивается под ширину окна</translation>
     </message>
     <message>
         <source>&amp;Brightness Contrast</source>
@@ -471,14 +419,70 @@ Shapes</source>
         <translation>&amp;Редактировать метку</translation>
     </message>
     <message>
+        <source>Save the labels under a new file name</source>
+        <translation>Сохранить метки под новым именем файла</translation>
+    </message>
+    <message>
         <source>Modify the label of the selected shape</source>
         <translation>Изменить метку выбранной фигуры</translation>
+    </message>
+    <message>
+        <source>Copy to Clipboard</source>
+        <translation>Копировать в буфер обмена</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>Поместить выбранные фигуры в буфер обмена</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>Вставить из буфера обмена</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>Вставить фигуры из буфера обмена в это изображение</translation>
     </message>
     <message>
         <source>Hand
 </source>
         <translation>Рука
 </translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Перетаскивайте левой кнопкой, чтобы сдвинуть вид, не изменяя фигуры</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>По размеру окна</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>Всё изображение остаётся видимым при изменении размера окна</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>По &amp;ширине</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>Ширина изображения подстраивается под окно при изменении его размера</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>Показать изображение крупнее</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>Показать изображение мельче</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>&amp;Реальный размер</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>Показать изображение в масштабе 100%</translation>
     </message>
     <message>
         <source>Fill Drawing Polygon</source>
@@ -661,10 +665,6 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Polygon</source>
         <translation>Полигон</translation>
-    </message>
-    <message>
-        <source>Drag with the left button to pan, without editing shapes</source>
-        <translation>Перетаскивайте левой кнопкой, чтобы сдвинуть вид, не изменяя фигуры</translation>
     </message>
     <message>
         <source>Rectangle</source>

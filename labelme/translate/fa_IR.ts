@@ -262,10 +262,6 @@
         <translation>ذخیره با نام دیگر(&amp;S)</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>ذخیره برچسب‌ها در فایل دیگر</translation>
-    </message>
-    <message>
         <source>&amp;Delete File</source>
         <translation>حذف(&amp;D)</translation>
     </message>
@@ -358,22 +354,6 @@
         <translation>ایجاد کپی از شکل‌های انتخاب شده</translation>
     </message>
     <message>
-        <source>Copy Shapes</source>
-        <translation>کپی شکل</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>کپی شکل‌های انتخاب شده به کلیپ‌بورد</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>چسباندن شکل</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>چسباندن شکل‌های کپی شده</translation>
-    </message>
-    <message>
         <source>Undo last point</source>
         <translation>بازگشت آخرین نقطه</translation>
     </message>
@@ -438,40 +418,8 @@ Shapes</source>
         <translation>بزرگ‌نمایی(&amp;I)</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>افزایش سطح زوم</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>کوچک‌نمایی(&amp;Z)</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>کاهش سطح زوم</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>اندازه اصلی(&amp;O)</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>زوم به اندازه اصلی</translation>
-    </message>
-    <message>
-        <source>&amp;Fit Window</source>
-        <translation>تناسب با پنجره(&amp;F)</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>زوم متناسب با اندازه پنجره</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>تناسب با عرض(&amp;W)</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>زوم متناسب با عرض پنجره</translation>
     </message>
     <message>
         <source>&amp;Brightness Contrast</source>
@@ -486,14 +434,70 @@ Shapes</source>
         <translation>ویرایش برچسب(&amp;E)</translation>
     </message>
     <message>
+        <source>Save the labels under a new file name</source>
+        <translation>ذخیره برچسب‌ها با نام فایل جدید</translation>
+    </message>
+    <message>
         <source>Modify the label of the selected shape</source>
         <translation>تغییر برچسب شکل انتخاب شده</translation>
+    </message>
+    <message>
+        <source>Copy to Clipboard</source>
+        <translation>کپی به کلیپ‌بورد</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>قرار دادن شکل‌های انتخاب شده در کلیپ‌بورد</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>چسباندن از کلیپ‌بورد</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>درج شکل‌های کلیپ‌بورد در این تصویر</translation>
     </message>
     <message>
         <source>Hand
 </source>
         <translation>دست
 </translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>برای جابه‌جایی با دکمه چپ بکشید، بدون ویرایش شکل‌ها</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>تناسب با پنجره(&amp;W)</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>نمایان نگه داشتن کل تصویر هنگام تغییر اندازهٔ پنجره</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>تناسب با عرض(&amp;D)</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>تطبیق عرض تصویر با پنجره هنگام تغییر اندازهٔ آن</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>نمایش تصویر در اندازهٔ بزرگ‌تر</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>نمایش تصویر در اندازهٔ کوچک‌تر</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>اندازهٔ &amp;واقعی</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>نمایش تصویر در ۱۰۰٪</translation>
     </message>
     <message>
         <source>Fill Drawing Polygon</source>
@@ -658,10 +662,6 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Polygon</source>
         <translation>چندضلعی</translation>
-    </message>
-    <message>
-        <source>Drag with the left button to pan, without editing shapes</source>
-        <translation>برای جابه‌جایی با دکمه چپ بکشید، بدون ویرایش شکل‌ها</translation>
     </message>
     <message>
         <source>Rectangle</source>

@@ -264,10 +264,6 @@
         <translation>Salva &amp;come</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>Salva le etichette in un file diverso</translation>
-    </message>
-    <message>
         <source>&amp;Delete File</source>
         <translation>&amp;Elimina file</translation>
     </message>
@@ -360,22 +356,6 @@
         <translation>Crea un duplicato dele forme selezionate</translation>
     </message>
     <message>
-        <source>Copy Shapes</source>
-        <translation>Copia forme</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>Copia le forme selezionate negli appunti</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>Incolla forme</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>Incolla le forme copiate</translation>
-    </message>
-    <message>
         <source>Undo last point</source>
         <translation>Annulla ultimo punto</translation>
     </message>
@@ -444,40 +424,8 @@ forme</translation>
         <translation>Zoom &amp;avanti</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>Aumenta il livello di zoom</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>Zoom &amp;indietro</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>Diminuisci il livello di zoom</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>Dimensione &amp;originale</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>Zoom alla dimensione originale</translation>
-    </message>
-    <message>
-        <source>&amp;Fit Window</source>
-        <translation>&amp;Adatta alla finestra</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>Lo zoom segue la dimensione della finestra</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>Adatta &amp;larghezza</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>Lo zoom segue la larghezza della finestra</translation>
     </message>
     <message>
         <source>&amp;Brightness Contrast</source>
@@ -492,14 +440,70 @@ forme</translation>
         <translation>&amp;Modifica etichetta</translation>
     </message>
     <message>
+        <source>Save the labels under a new file name</source>
+        <translation>Salva le etichette con un nuovo nome di file</translation>
+    </message>
+    <message>
         <source>Modify the label of the selected shape</source>
         <translation>Modifica l&apos;etichetta della forma selezionata</translation>
+    </message>
+    <message>
+        <source>Copy to Clipboard</source>
+        <translation>Copia negli appunti</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>Metti le forme selezionate negli appunti</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>Incolla dagli appunti</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>Inserisci in questa immagine le forme degli appunti</translation>
     </message>
     <message>
         <source>Hand
 </source>
         <translation>Mano
 </translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Trascina con il pulsante sinistro per spostare, senza modificare le forme</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>&amp;Adatta alla finestra</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>Mantiene visibile l&apos;intera immagine quando la finestra viene ridimensionata</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>Adatta &amp;larghezza</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>Allinea la larghezza dell&apos;immagine alla finestra quando viene ridimensionata</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>Mostra l&apos;immagine più grande</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>Mostra l&apos;immagine più piccola</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>&amp;Dimensioni reali</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>Mostra l&apos;immagine al 100%</translation>
     </message>
     <message>
         <source>Fill Drawing Polygon</source>
@@ -664,10 +668,6 @@ Cambia il modello AI Text-to-Annotation in &apos;SAM3 (smart)&apos; oppure impos
     <message>
         <source>Polygon</source>
         <translation>Poligono</translation>
-    </message>
-    <message>
-        <source>Drag with the left button to pan, without editing shapes</source>
-        <translation>Trascina con il pulsante sinistro per spostare, senza modificare le forme</translation>
     </message>
     <message>
         <source>Rectangle</source>

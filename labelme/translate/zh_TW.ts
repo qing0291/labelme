@@ -262,10 +262,6 @@
         <translation>另存為(&amp;S)</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>保存標籤到不同的文件</translation>
-    </message>
-    <message>
         <source>&amp;Delete File</source>
         <translation>刪除(&amp;D)</translation>
     </message>
@@ -358,22 +354,6 @@
         <translation>為選中的圖形創建副本</translation>
     </message>
     <message>
-        <source>Copy Shapes</source>
-        <translation>複製圖形</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>複製選中圖形到剪貼板</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>粘貼圖形</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>粘貼已複製的圖形</translation>
-    </message>
-    <message>
         <source>Undo last point</source>
         <translation>撤銷最後的控制點</translation>
     </message>
@@ -438,40 +418,8 @@ Shapes</source>
         <translation>放大(&amp;I)</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>增加縮放水平</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>縮小(&amp;Z)</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>減小縮放水平</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>原始大小(&amp;O)</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>縮放至原始大小</translation>
-    </message>
-    <message>
-        <source>&amp;Fit Window</source>
-        <translation>適應窗口(&amp;F)</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>跟隨窗口大小縮放</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>適應寬度(&amp;W)</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>跟隨窗口寬度縮放</translation>
     </message>
     <message>
         <source>&amp;Brightness Contrast</source>
@@ -486,14 +434,70 @@ Shapes</source>
         <translation>編輯標籤(&amp;E)</translation>
     </message>
     <message>
+        <source>Save the labels under a new file name</source>
+        <translation>以新的檔案名稱儲存標籤</translation>
+    </message>
+    <message>
         <source>Modify the label of the selected shape</source>
         <translation>修改選中圖形的標籤</translation>
+    </message>
+    <message>
+        <source>Copy to Clipboard</source>
+        <translation>複製到剪貼板</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>將選中圖形放入剪貼板</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>從剪貼板粘貼</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>將剪貼板中的圖形插入此圖片</translation>
     </message>
     <message>
         <source>Hand
 </source>
         <translation>手形
 </translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>按住左鍵拖曳以平移畫布，不會編輯標註</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>適應窗口(&amp;W)</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>調整視窗大小時保持整張影像可見</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>適應寬度(&amp;D)</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>調整視窗大小時使影像寬度與視窗一致</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>以較大的尺寸顯示影像</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>以較小的尺寸顯示影像</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>實際大小(&amp;A)</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>以 100% 顯示影像</translation>
     </message>
     <message>
         <source>Fill Drawing Polygon</source>
@@ -658,10 +662,6 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Polygon</source>
         <translation>多邊形</translation>
-    </message>
-    <message>
-        <source>Drag with the left button to pan, without editing shapes</source>
-        <translation>按住左鍵拖曳以平移畫布，不會編輯標註</translation>
     </message>
     <message>
         <source>Rectangle</source>

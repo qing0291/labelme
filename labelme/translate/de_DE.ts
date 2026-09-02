@@ -264,10 +264,6 @@
         <translation>Speichern &amp;unter</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>Labels in anderer Datei speichern</translation>
-    </message>
-    <message>
         <source>&amp;Delete File</source>
         <translation>&amp;Datei löschen</translation>
     </message>
@@ -320,6 +316,12 @@
         <translation>Mit dem Zeichnen von Polygonen beginnen</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>Hand
+</translation>
+    </message>
+    <message>
         <source>Drag with the left button to pan, without editing shapes</source>
         <translation>Mit der linken Maustaste verschieben, ohne Formen zu bearbeiten</translation>
     </message>
@@ -366,22 +368,6 @@
     <message>
         <source>Create a duplicate of the selected shapes</source>
         <translation>Duplikat der ausgewählten Formen erstellen</translation>
-    </message>
-    <message>
-        <source>Copy Shapes</source>
-        <translation>Formen kopieren</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>Ausgewählte Formen in Zwischenablage kopieren</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>Formen einfügen</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>Kopierte Formen einfügen</translation>
     </message>
     <message>
         <source>Undo last point</source>
@@ -452,40 +438,8 @@ Formen</translation>
         <translation>&amp;Vergrößern</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>Zoomstufe erhöhen</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>&amp;Verkleinern</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>Zoomstufe verringern</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>&amp;Originalgröße</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>Auf Originalgröße zoomen</translation>
-    </message>
-    <message>
-        <source>&amp;Fit Window</source>
-        <translation>&amp;An Fenster anpassen</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>Zoom folgt der Fenstergröße</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>&amp;An Breite anpassen</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>Zoom folgt der Fensterbreite</translation>
     </message>
     <message>
         <source>&amp;Brightness Contrast</source>
@@ -516,10 +470,56 @@ Formen</translation>
         <translation>Vorherige Helligkeit/Kontrast beibehalten</translation>
     </message>
     <message>
-        <source>Hand
-</source>
-        <translation>Hand
-</translation>
+        <source>Save the labels under a new file name</source>
+        <translation>Labels unter einem neuen Dateinamen speichern</translation>
+    </message>
+    <message>
+        <source>Copy to Clipboard</source>
+        <translation>In Zwischenablage kopieren</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>Ausgewählte Formen in die Zwischenablage legen</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>Aus Zwischenablage einfügen</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>Formen aus der Zwischenablage in dieses Bild einfügen</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>&amp;An Fenster anpassen</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>Das ganze Bild sichtbar halten, wenn die Fenstergröße geändert wird</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>&amp;An Breite anpassen</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>Die Bildbreite an das Fenster angleichen, wenn dessen Größe geändert wird</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>Das Bild größer anzeigen</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>Das Bild kleiner anzeigen</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>&amp;Originalgröße</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>Das Bild bei 100 % anzeigen</translation>
     </message>
     <message>
         <source>&amp;File</source>

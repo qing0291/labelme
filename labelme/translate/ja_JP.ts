@@ -267,10 +267,6 @@
         <translation>名前を付けて保存(&amp;A)</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>ラベルを別のファイルに保存</translation>
-    </message>
-    <message>
         <source>&amp;Delete File</source>
         <translation>ファイルを
 削除(&amp;D)</translation>
@@ -367,22 +363,6 @@
         <translation>選択した図形の複製を作成</translation>
     </message>
     <message>
-        <source>Copy Shapes</source>
-        <translation>図形をコピー</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>選択した図形をクリップボードにコピー</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>図形を貼り付け</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>コピーした図形を貼り付け</translation>
-    </message>
-    <message>
         <source>Undo last point</source>
         <translation>最後の頂点を取り消し</translation>
     </message>
@@ -450,41 +430,8 @@ Shapes</source>
         <translation>拡大(&amp;I)</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>拡大率を上げる</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>縮小(&amp;Z)</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>拡大率を下げる</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>原寸大(&amp;O)</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>原寸大で表示</translation>
-    </message>
-    <message>
-        <source>&amp;Fit Window</source>
-        <translation>ウィンドウに
-合わせる(&amp;F)</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>ウィンドウサイズに合わせてズーム</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>幅に合わせる(&amp;W)</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>ウィンドウ幅に合わせてズーム</translation>
     </message>
     <message>
         <source>&amp;Brightness Contrast</source>
@@ -500,14 +447,71 @@ Shapes</source>
         <translation>ラベルを編集(&amp;E)</translation>
     </message>
     <message>
+        <source>Save the labels under a new file name</source>
+        <translation>ラベルを新しいファイル名で保存</translation>
+    </message>
+    <message>
         <source>Modify the label of the selected shape</source>
         <translation>選択した図形のラベルを変更</translation>
+    </message>
+    <message>
+        <source>Copy to Clipboard</source>
+        <translation>クリップボードにコピー</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>選択した図形をクリップボードに置く</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>クリップボードから貼り付け</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>クリップボードの図形をこの画像に挿入</translation>
     </message>
     <message>
         <source>Hand
 </source>
         <translation>手のひら
 </translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>左ボタンのドラッグで表示位置を移動します（図形は編集しません）</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>ウィンドウに
+合わせる(&amp;W)</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>ウィンドウのサイズ変更時も画像全体を表示し続ける</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>幅に合わせる(&amp;D)</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>ウィンドウのサイズ変更時に画像の幅をウィンドウに揃える</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>画像を大きく表示する</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>画像を小さく表示する</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>実際のサイズ(&amp;A)</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>画像を100%で表示する</translation>
     </message>
     <message>
         <source>Fill Drawing Polygon</source>
@@ -672,10 +676,6 @@ AI Text-to-Annotation モデルを &apos;SAM3 (smart)&apos; に切り替える�
     <message>
         <source>Polygon</source>
         <translation>ポリゴン</translation>
-    </message>
-    <message>
-        <source>Drag with the left button to pan, without editing shapes</source>
-        <translation>左ボタンのドラッグで表示位置を移動します（図形は編集しません）</translation>
     </message>
     <message>
         <source>Rectangle</source>

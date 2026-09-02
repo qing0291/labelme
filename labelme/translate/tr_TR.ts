@@ -262,10 +262,6 @@
         <translation>&amp;Farklı Kaydet</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>Etiketleri başka bir dosyaya kaydet</translation>
-    </message>
-    <message>
         <source>&amp;Delete File</source>
         <translation>Dosyayı &amp;Sil</translation>
     </message>
@@ -358,22 +354,6 @@
         <translation>Seçili şekillerin bir kopyasını oluştur</translation>
     </message>
     <message>
-        <source>Copy Shapes</source>
-        <translation>Şekilleri Kopyala</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>Seçili şekilleri panoya kopyala</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>Şekilleri Yapıştır</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>Kopyalanmış şekilleri yapıştır</translation>
-    </message>
-    <message>
         <source>Undo last point</source>
         <translation>Son noktayı geri al</translation>
     </message>
@@ -441,40 +421,8 @@ Shapes</source>
         <translation>&amp;Yakınlaştır</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>Yakınlaştırma düzeyini artır</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>&amp;Uzaklaştır</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>Yakınlaştırma düzeyini azalt</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>&amp;Orijinal Boyut</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>Orijinal boyuta getir</translation>
-    </message>
-    <message>
-        <source>&amp;Fit Window</source>
-        <translation>Pencereye &amp;Sığdır</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>Yakınlaştırma pencere boyutunu izler</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>&amp;Genişliğe Sığdır</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>Yakınlaştırma pencere genişliğini izler</translation>
     </message>
     <message>
         <source>&amp;Brightness Contrast</source>
@@ -489,14 +437,70 @@ Shapes</source>
         <translation>Etiketi &amp;Düzenle</translation>
     </message>
     <message>
+        <source>Save the labels under a new file name</source>
+        <translation>Etiketleri yeni bir dosya adıyla kaydet</translation>
+    </message>
+    <message>
         <source>Modify the label of the selected shape</source>
         <translation>Seçili şeklin etiketini değiştir</translation>
+    </message>
+    <message>
+        <source>Copy to Clipboard</source>
+        <translation>Panoya Kopyala</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>Seçili şekilleri panoya koy</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>Panodan Yapıştır</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>Panodaki şekilleri bu görüntüye ekle</translation>
     </message>
     <message>
         <source>Hand
 </source>
         <translation>El
 </translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Şekilleri düzenlemeden görünümü kaydırmak için sol düğmeyle sürükleyin</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>Pencereye &amp;Sığdır</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>Pencere yeniden boyutlandırıldığında görüntünün tamamını görünür tut</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>&amp;Genişliğe Sığdır</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>Pencere yeniden boyutlandırıldığında görüntü genişliğini pencereye eşitle</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>Görüntüyü daha büyük göster</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>Görüntüyü daha küçük göster</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>&amp;Gerçek Boyut</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>Görüntüyü %100 boyutunda göster</translation>
     </message>
     <message>
         <source>Fill Drawing Polygon</source>
@@ -661,10 +665,6 @@ AI Text-to-Annotation modelini &apos;SAM3 (smart)&apos; olarak değiştirin veya
     <message>
         <source>Polygon</source>
         <translation>Çokgen</translation>
-    </message>
-    <message>
-        <source>Drag with the left button to pan, without editing shapes</source>
-        <translation>Şekilleri düzenlemeden görünümü kaydırmak için sol düğmeyle sürükleyin</translation>
     </message>
     <message>
         <source>Rectangle</source>

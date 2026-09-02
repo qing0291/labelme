@@ -262,10 +262,6 @@
         <translation>다른 이름으로 저장(&amp;S)</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>레이블을 다른 파일로 저장</translation>
-    </message>
-    <message>
         <source>&amp;Delete File</source>
         <translation>삭제(&amp;D)</translation>
     </message>
@@ -358,22 +354,6 @@
         <translation>선택한 도형의 복사본 생성</translation>
     </message>
     <message>
-        <source>Copy Shapes</source>
-        <translation>도형 복사</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>선택한 도형을 클립보드에 복사</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>도형 붙여넣기</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>복사한 도형 붙여넣기</translation>
-    </message>
-    <message>
         <source>Undo last point</source>
         <translation>마지막 점 실행 취소</translation>
     </message>
@@ -438,40 +418,8 @@ Shapes</source>
         <translation>확대(&amp;I)</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>확대 수준 증가</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>축소(&amp;Z)</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>확대 수준 감소</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>원본 크기(&amp;O)</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>원본 크기로 확대/축소</translation>
-    </message>
-    <message>
-        <source>&amp;Fit Window</source>
-        <translation>창에 맞추기(&amp;F)</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>확대/축소가 창 크기에 맞춤</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>너비에 맞추기(&amp;W)</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>확대/축소가 창 너비에 맞춤</translation>
     </message>
     <message>
         <source>&amp;Brightness Contrast</source>
@@ -486,14 +434,70 @@ Shapes</source>
         <translation>레이블 편집(&amp;E)</translation>
     </message>
     <message>
+        <source>Save the labels under a new file name</source>
+        <translation>레이블을 새 파일 이름으로 저장</translation>
+    </message>
+    <message>
         <source>Modify the label of the selected shape</source>
         <translation>선택한 도형의 레이블 수정</translation>
+    </message>
+    <message>
+        <source>Copy to Clipboard</source>
+        <translation>클립보드에 복사</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>선택한 도형을 클립보드에 담기</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>클립보드에서 붙여넣기</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>클립보드의 도형을 이 이미지에 삽입</translation>
     </message>
     <message>
         <source>Hand
 </source>
         <translation>손
 </translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>왼쪽 버튼으로 드래그하여 도형을 편집하지 않고 화면을 이동합니다</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>창에 맞추기(&amp;W)</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>창 크기가 바뀌어도 이미지 전체가 보이도록 유지</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>너비에 맞추기(&amp;D)</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>창 크기가 바뀔 때 이미지 너비를 창에 맞춤</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>이미지를 더 크게 표시</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>이미지를 더 작게 표시</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>실제 크기(&amp;A)</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>이미지를 100%로 표시</translation>
     </message>
     <message>
         <source>Fill Drawing Polygon</source>
@@ -658,10 +662,6 @@ AI Text-to-Annotation 모델을 &apos;SAM3 (smart)&apos;(으)로 변경하거나
     <message>
         <source>Polygon</source>
         <translation>다각형</translation>
-    </message>
-    <message>
-        <source>Drag with the left button to pan, without editing shapes</source>
-        <translation>왼쪽 버튼으로 드래그하여 도형을 편집하지 않고 화면을 이동합니다</translation>
     </message>
     <message>
         <source>Rectangle</source>

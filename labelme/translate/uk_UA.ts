@@ -201,10 +201,6 @@
         <translation>&amp;Зберегти як</translation>
     </message>
     <message>
-        <source>Save labels to a different file</source>
-        <translation>Зберегти мітки в інший файл</translation>
-    </message>
-    <message>
         <source>Save &amp;Automatically</source>
         <translation>&amp;Автоматично зберегти</translation>
     </message>
@@ -286,28 +282,24 @@
         <translation>Змінити мітку вибраної фігури</translation>
     </message>
     <message>
+        <source>Copy to Clipboard</source>
+        <translation>Копіювати в буфер обміну</translation>
+    </message>
+    <message>
+        <source>Place the selected shapes on the clipboard</source>
+        <translation>Помістити вибрані фігури в буфер обміну</translation>
+    </message>
+    <message>
+        <source>Paste from Clipboard</source>
+        <translation>Вставити з буфера обміну</translation>
+    </message>
+    <message>
         <source>Duplicate Shapes</source>
         <translation>Дублювати фігури</translation>
     </message>
     <message>
         <source>Create a duplicate of the selected shapes</source>
         <translation>Створити дублікат вибраних фігур</translation>
-    </message>
-    <message>
-        <source>Copy Shapes</source>
-        <translation>Копіювати фігури</translation>
-    </message>
-    <message>
-        <source>Copy selected shapes to clipboard</source>
-        <translation>Копіювати вибрані фігури в буфер обміну</translation>
-    </message>
-    <message>
-        <source>Paste Shapes</source>
-        <translation>Вставити фігури</translation>
-    </message>
-    <message>
-        <source>Paste copied shapes</source>
-        <translation>Вставити скопійовані фігури</translation>
     </message>
     <message>
         <source>Undo last point</source>
@@ -345,6 +337,12 @@
     <message>
         <source>Move and edit the selected shapes</source>
         <translation>Перемістити і відредагувати вибрані фігури</translation>
+    </message>
+    <message>
+        <source>Hand
+</source>
+        <translation>Рука
+</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>
@@ -387,22 +385,6 @@
         <translation>Відкрити попередній (утримуйте Ctrl+Shift, щоб скопіювати мітки)</translation>
     </message>
     <message>
-        <source>&amp;Fit Window</source>
-        <translation>&amp;Припасувати вікно</translation>
-    </message>
-    <message>
-        <source>Zoom follows window size</source>
-        <translation>Масштаб відповідає розміру вікна</translation>
-    </message>
-    <message>
-        <source>Fit &amp;Width</source>
-        <translation>За &amp;шириною</translation>
-    </message>
-    <message>
-        <source>Zoom follows window width</source>
-        <translation>Масштаб відповідає ширині вікна</translation>
-    </message>
-    <message>
         <source>&amp;Brightness Contrast</source>
         <translation>&amp;Яскравість Контраст</translation>
     </message>
@@ -415,24 +397,8 @@
         <translation>&amp;Збільшити</translation>
     </message>
     <message>
-        <source>Increase zoom level</source>
-        <translation>Збільшити масштаб</translation>
-    </message>
-    <message>
         <source>&amp;Zoom Out</source>
         <translation>&amp;Зменшити</translation>
-    </message>
-    <message>
-        <source>Decrease zoom level</source>
-        <translation>Зменшити масштаб</translation>
-    </message>
-    <message>
-        <source>&amp;Original size</source>
-        <translation>&amp;Оригінальний розмір</translation>
-    </message>
-    <message>
-        <source>Zoom to original size</source>
-        <translation>Збільшити до оригінального розміру</translation>
     </message>
     <message>
         <source>Reset Layout</source>
@@ -661,10 +627,12 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
         <translation>Багатокутник</translation>
     </message>
     <message>
-        <source>Hand
-</source>
-        <translation>Рука
-</translation>
+        <source>Save the labels under a new file name</source>
+        <translation>Зберегти мітки під новою назвою файлу</translation>
+    </message>
+    <message>
+        <source>Insert the clipboard shapes into this image</source>
+        <translation>Вставити фігури з буфера обміну в це зображення</translation>
     </message>
     <message>
         <source>Rectangle</source>
@@ -701,6 +669,38 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>Намалюйте обмежувальну рамку для сегментації об&apos;єкта.</translation>
+    </message>
+    <message>
+        <source>Fit to &amp;Window</source>
+        <translation>&amp;Припасувати вікно</translation>
+    </message>
+    <message>
+        <source>Keep the whole image visible when the window is resized</source>
+        <translation>Усе зображення залишається видимим під час зміни розміру вікна</translation>
+    </message>
+    <message>
+        <source>Fit to Wi&amp;dth</source>
+        <translation>За &amp;шириною</translation>
+    </message>
+    <message>
+        <source>Match the image width to the window when it is resized</source>
+        <translation>Ширина зображення підлаштовується під вікно під час зміни його розміру</translation>
+    </message>
+    <message>
+        <source>Make the image appear larger</source>
+        <translation>Показати зображення більшим</translation>
+    </message>
+    <message>
+        <source>Make the image appear smaller</source>
+        <translation>Показати зображення меншим</translation>
+    </message>
+    <message>
+        <source>&amp;Actual Size</source>
+        <translation>&amp;Реальний розмір</translation>
+    </message>
+    <message>
+        <source>Show the image at 100%</source>
+        <translation>Показати зображення в масштабі 100%</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>
