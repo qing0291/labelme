@@ -1558,6 +1558,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self._actions.edit_mode.setEnabled(
             not edit and not self._canvas_widgets.canvas.is_drawing
         )
+        self._actions.hand.setEnabled(not self._canvas_widgets.canvas.is_drawing)
         self._ai_text.setEnabled(
             not edit
             and create_mode
@@ -1976,6 +1977,7 @@ class MainWindow(QtWidgets.QMainWindow):
                 shape.description = description
                 self.add_label(shape=shape)
             self._actions.edit_mode.setEnabled(True)
+            self._actions.hand.setEnabled(True)
             self._actions.undo_last_point.setEnabled(False)
             self._actions.undo.setEnabled(True)
             self.mark_dirty()

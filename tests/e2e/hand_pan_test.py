@@ -19,6 +19,7 @@ from labelme._widgets.canvas import _CanvasMode
 from ..conftest import close_or_pause
 from .conftest import click_canvas_fraction
 from .conftest import drag_canvas
+from .conftest import draw_and_commit_polygon
 
 _DRAG_OFFSET_PX: Final[int] = 40
 
@@ -342,5 +343,35 @@ def test_navigating_leaves_the_label_file_byte_identical(
     # annotations specifically rather than requiring an empty directory.
     assert list(tmp_path.glob("*.json")) == []
     assert not annotated_win._is_changed
+
+    close_or_pause(qtbot=qtbot, widget=annotated_win, pause=pause)
+
+
+@pytest.mark.gui
+def test_hand_is_available_again_after_a_shape_is_committed(
+    *,
+    qtbot: QtBot,
+    annotated_win: MainWindow,
+    pause: bool,
+) -> None:
+    # Committing a shape does not emit drawing_polygon(False), so the action
+    # has to be re-enabled on the commit path or Hand stays dead for the rest
+    # of the session.
+    canvas = annotated_win._canvas_widgets.canvas
+    draw_and_commit_polygon(
+        qtbot=qtbot,
+        win=annotated_win,
+        label="hand-check",
+        vertices=((0.2, 0.2), (0.4, 0.2), (0.3, 0.4)),
+    )
+
+    assert annotated_win._actions.hand.isEnabled()
+
+    annotated_win.set_hand_mode(True)  # noqa: FBT003 -- positional-only slot signature
+    assert canvas.is_hand_mode()
+
+    # And still available after switching to Edit Shapes.
+    annotated_win._switch_canvas_mode(edit=True, create_mode=None)
+    assert annotated_win._actions.hand.isEnabled()
 
     close_or_pause(qtbot=qtbot, widget=annotated_win, pause=pause)
