@@ -1,11 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256">
-  <path d="M81,120H187a0,0,0,0,1,0,0v42a53,53,0,0,1-53,53H134a53,53,0,0,1-53-53V120A0,0,0,0,1,81,120Z" opacity="0.2"></path>
-  <rect x="55" y="112" width="22" height="64" rx="11" transform="rotate(-35 66 144)"></rect>
-  <rect x="81" y="76" width="22" height="80" rx="11"></rect>
-  <rect x="109" y="60" width="22" height="96" rx="11"></rect>
-  <rect x="137" y="64" width="22" height="92" rx="11"></rect>
-  <rect x="165" y="84" width="22" height="72" rx="11"></rect>
-  <path d="M81,128v34a53,53,0,0,0,53,53h0a53,53,0,0,0,53-53V128"
-        fill="none" stroke="currentColor" stroke-width="22"
-        stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M226,192 L226,110 A15,15 0 0 0 196,110 L196,150 A5,5 0 0 1 186,150 L186,62 A15,15 0 0 0 156,62 L156,150 A5,5 0 0 1 146,150 L146,52 A15,15 0 0 0 116,52 L116,150 A5,5 0 0 1 106,150 L106,76 A15,15 0 0 0 76,76 L76,155 Q78,160 81,163 L37,185 A15,15 0 0 0 51,211 L95,189 Q104,218 130,218 L196,218 Q226,218 226,192 Z" opacity="0.2"></path>
+  <path d="M226,192 L226,110 A15,15 0 0 0 196,110 L196,150 A5,5 0 0 1 186,150 L186,62 A15,15 0 0 0 156,62 L156,150 A5,5 0 0 1 146,150 L146,52 A15,15 0 0 0 116,52 L116,150 A5,5 0 0 1 106,150 L106,76 A15,15 0 0 0 76,76 L76,155 Q78,160 81,163 L37,185 A15,15 0 0 0 51,211 L95,189 Q104,218 130,218 L196,218 Q226,218 226,192 Z" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
 </svg>
