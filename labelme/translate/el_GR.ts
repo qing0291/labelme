@@ -347,10 +347,6 @@
         <translation>Μετακίνηση και επεξεργασία των επιλεγμένων σχημάτων</translation>
     </message>
     <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;Χέρι</translation>
-    </message>
-    <message>
         <source>Drag with the left button to pan, without editing shapes</source>
         <translation>Σύρετε με το αριστερό κουμπί για μετακίνηση, χωρίς επεξεργασία σχημάτων</translation>
     </message>
@@ -662,6 +658,12 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Polygon</source>
         <translation>Πολύγωνο</translation>
+    </message>
+    <message>
+        <source>Hand
+</source>
+        <translation>Χέρι
+</translation>
     </message>
     <message>
         <source>Rectangle</source>

@@ -320,10 +320,6 @@
         <translation>Sokszögek rajzolásának megkezdése</translation>
     </message>
     <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;Kéz</translation>
-    </message>
-    <message>
         <source>Drag with the left button to pan, without editing shapes</source>
         <translation>Húzza a bal gombbal a mozgatáshoz, alakzatok szerkesztése nélkül</translation>
     </message>
@@ -518,6 +514,12 @@ Shapes</source>
     <message>
         <source>Keep Previous Brightness/Contrast</source>
         <translation>Előző fényerő/kontraszt megtartása</translation>
+    </message>
+    <message>
+        <source>Hand
+</source>
+        <translation>Kéz
+</translation>
     </message>
     <message>
         <source>&amp;File</source>

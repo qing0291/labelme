@@ -504,6 +504,12 @@ Shapes</source>
         <translation>選択した図形のラベルを変更</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>手のひら
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>描画中のポリゴンを塗りつぶす</translation>
     </message>
@@ -666,10 +672,6 @@ AI Text-to-Annotation モデルを &apos;SAM3 (smart)&apos; に切り替える�
     <message>
         <source>Polygon</source>
         <translation>ポリゴン</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>手のひら(&amp;H)</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

@@ -490,6 +490,12 @@ Shapes</source>
         <translation>Label van geselecteerde vorm wijzigen</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>Hand
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>Polygoon Vullen bij Tekenen</translation>
     </message>
@@ -652,10 +658,6 @@ Wijzig het AI Text-to-Annotation-model naar &apos;SAM3 (smart)&apos; of stel het
     <message>
         <source>Polygon</source>
         <translation>Polygoon</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;Hand</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

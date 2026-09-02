@@ -490,6 +490,12 @@ Shapes</source>
         <translation>แก้ไขเลเบลของรูปร่างที่เลือก</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>มือ
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>เติมสีหลายเหลี่ยมที่วาด</translation>
     </message>
@@ -652,10 +658,6 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Polygon</source>
         <translation>หลายเหลี่ยม</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>มือ (&amp;H)</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

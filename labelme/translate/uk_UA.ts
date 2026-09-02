@@ -347,10 +347,6 @@
         <translation>Перемістити і відредагувати вибрані фігури</translation>
     </message>
     <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;Рука</translation>
-    </message>
-    <message>
         <source>Drag with the left button to pan, without editing shapes</source>
         <translation>Перетягуйте лівою кнопкою, щоб зсунути вигляд, не змінюючи фігури</translation>
     </message>
@@ -663,6 +659,12 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Polygon</source>
         <translation>Багатокутник</translation>
+    </message>
+    <message>
+        <source>Hand
+</source>
+        <translation>Рука
+</translation>
     </message>
     <message>
         <source>Rectangle</source>

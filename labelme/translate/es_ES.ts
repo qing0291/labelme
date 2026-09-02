@@ -490,6 +490,12 @@ Shapes</source>
         <translation>Modificar la etiqueta de la forma seleccionada</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>Mano
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>Rellenar polígono al dibujar</translation>
     </message>
@@ -652,10 +658,6 @@ Cambie el modelo de AI Text-to-Annotation a &apos;SAM3 (smart)&apos; o establezc
     <message>
         <source>Polygon</source>
         <translation>Polígono</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;Mano</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

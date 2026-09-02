@@ -475,6 +475,12 @@ Shapes</source>
         <translation>Изменить метку выбранной фигуры</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>Рука
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>Заполнить нарисованный полигон</translation>
     </message>
@@ -655,10 +661,6 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Polygon</source>
         <translation>Полигон</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;Рука</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

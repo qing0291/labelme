@@ -493,6 +493,12 @@ Shapes</source>
         <translation>Seçili şeklin etiketini değiştir</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>El
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>Çizerken Çokgeni Doldur</translation>
     </message>
@@ -655,10 +661,6 @@ AI Text-to-Annotation modelini &apos;SAM3 (smart)&apos; olarak değiştirin veya
     <message>
         <source>Polygon</source>
         <translation>Çokgen</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;El</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

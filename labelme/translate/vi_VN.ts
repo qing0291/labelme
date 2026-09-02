@@ -490,6 +490,12 @@ Shapes</source>
         <translation>Sửa đổi nhãn của hình dạng đã chọn</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>Bàn tay
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>Tô Đa giác Vẽ</translation>
     </message>
@@ -652,10 +658,6 @@ Chuyển mô hình AI Text-to-Annotation sang &apos;SAM3 (smart)&apos;, hoặc �
     <message>
         <source>Polygon</source>
         <translation>Đa giác</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;Bàn tay</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

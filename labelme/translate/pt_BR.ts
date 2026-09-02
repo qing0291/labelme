@@ -490,6 +490,12 @@ Shapes</source>
         <translation>Modificar o rótulo da forma selecionada</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>Mão
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>Preencher Polígono ao Desenhar</translation>
     </message>
@@ -652,10 +658,6 @@ Mude o modelo de AI Text-to-Annotation para &apos;SAM3 (smart)&apos; ou defina o
     <message>
         <source>Polygon</source>
         <translation>Polígono</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;Mão</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

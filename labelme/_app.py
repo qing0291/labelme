@@ -517,7 +517,10 @@ class MainWindow(QtWidgets.QMainWindow):
             enabled=False,
         )
         hand = action(
-            text=self.tr("&Hand"),
+            # Trailing newline, as Undo does: the toolbar lays labels out under
+            # the icon, and a one-line label would ride up out of line with the
+            # two-line ones beside it.
+            text=self.tr("Hand\n"),
             slot=self.set_hand_mode,
             shortcut=shortcuts["hand"],
             icon="hand.svg",

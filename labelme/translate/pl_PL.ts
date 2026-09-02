@@ -490,6 +490,12 @@ Shapes</source>
         <translation>Zmień etykietę zaznaczonego kształtu</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>Rączka
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>Wypełnij rysowany wielokąt</translation>
     </message>
@@ -652,10 +658,6 @@ Zmień model AI Text-to-Annotation na &apos;SAM3 (smart)&apos; lub ustaw format 
     <message>
         <source>Polygon</source>
         <translation>Wielokąt</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;Rączka</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

@@ -490,6 +490,12 @@ Shapes</source>
         <translation>修改選中圖形的標籤</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>手形
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>填充所繪多邊形</translation>
     </message>
@@ -652,10 +658,6 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Polygon</source>
         <translation>多邊形</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>手形(&amp;H)</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

@@ -490,6 +490,12 @@ Shapes</source>
         <translation>تغییر برچسب شکل انتخاب شده</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>دست
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>پر کردن چندضلعی رسم شده</translation>
     </message>
@@ -652,10 +658,6 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Polygon</source>
         <translation>چندضلعی</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>دست(&amp;H)</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

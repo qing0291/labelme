@@ -465,6 +465,12 @@
         <translation>Ubah label bentuk yang dipilih</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>Tangan
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>Isi Poligon yang Digambar</translation>
     </message>
@@ -627,10 +633,6 @@ Ganti model AI Text-to-Annotation ke &apos;SAM3 (smart)&apos;, atau atur format 
     <message>
         <source>Polygon</source>
         <translation>Poligon</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;Tangan</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

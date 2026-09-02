@@ -496,6 +496,12 @@ les formes</translation>
         <translation>Modifier l&apos;étiquette de la forme sélectionnée</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>Main
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>Remplir le polygone en cours de dessin</translation>
     </message>
@@ -658,10 +664,6 @@ Changez le modèle AI Text-to-Annotation pour &apos;SAM3 (smart)&apos;, ou défi
     <message>
         <source>Polygon</source>
         <translation>Polygone</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;Main</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

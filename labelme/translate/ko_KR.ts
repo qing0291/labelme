@@ -490,6 +490,12 @@ Shapes</source>
         <translation>선택한 도형의 레이블 수정</translation>
     </message>
     <message>
+        <source>Hand
+</source>
+        <translation>손
+</translation>
+    </message>
+    <message>
         <source>Fill Drawing Polygon</source>
         <translation>그리기 다각형 채우기</translation>
     </message>
@@ -652,10 +658,6 @@ AI Text-to-Annotation 모델을 &apos;SAM3 (smart)&apos;(으)로 변경하거나
     <message>
         <source>Polygon</source>
         <translation>다각형</translation>
-    </message>
-    <message>
-        <source>&amp;Hand</source>
-        <translation>손(&amp;H)</translation>
     </message>
     <message>
         <source>Drag with the left button to pan, without editing shapes</source>

@@ -320,10 +320,6 @@
         <translation>Mit dem Zeichnen von Polygonen beginnen</translation>
     </message>
     <message>
-        <source>&amp;Hand</source>
-        <translation>&amp;Hand</translation>
-    </message>
-    <message>
         <source>Drag with the left button to pan, without editing shapes</source>
         <translation>Mit der linken Maustaste verschieben, ohne Formen zu bearbeiten</translation>
     </message>
@@ -518,6 +514,12 @@ Formen</translation>
     <message>
         <source>Keep Previous Brightness/Contrast</source>
         <translation>Vorherige Helligkeit/Kontrast beibehalten</translation>
+    </message>
+    <message>
+        <source>Hand
+</source>
+        <translation>Hand
+</translation>
     </message>
     <message>
         <source>&amp;File</source>
