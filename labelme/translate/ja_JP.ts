@@ -105,6 +105,10 @@
         <translation>図形を編集中</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>手のひら: ドラッグで移動 • H または ESC で終了</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>直線の始点をクリック</translation>
     </message>
@@ -442,10 +446,6 @@ Shapes</source>
         <translation>チュートリアルページを表示</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>ズーム</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>拡大(&amp;I)</translation>
     </message>
@@ -510,10 +510,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>描画中にポリゴンを塗りつぶす</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+ホイールでキャンバスをズームします</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -672,6 +668,14 @@ AI Text-to-Annotation モデルを &apos;SAM3 (smart)&apos; に切り替える�
         <translation>ポリゴン</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>手のひら(&amp;H)</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>左ボタンのドラッグで表示位置を移動します（図形は編集しません）</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>矩形</translation>
     </message>
@@ -706,6 +710,10 @@ AI Text-to-Annotation モデルを &apos;SAM3 (smart)&apos; に切り替える�
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>バウンディングボックスを描画してオブジェクトをセグメント。</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>ホイールで拡大縮小 • Shift+ホイールで左右に移動</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

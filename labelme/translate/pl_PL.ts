@@ -105,6 +105,10 @@
         <translation>Edycja kształtów</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>Rączka: przeciągnij, aby przesunąć • H lub ESC, aby wyjść</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>Kliknij punkt początkowy linii</translation>
     </message>
@@ -430,10 +434,6 @@ Shapes</source>
         <translation>Pokaż stronę samouczka</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>Powiększenie</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>Powiększ (&amp;I)</translation>
     </message>
@@ -496,10 +496,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>Wypełniaj wielokąt podczas rysowania</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+kółko powiększa płótno</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -658,6 +654,14 @@ Zmień model AI Text-to-Annotation na &apos;SAM3 (smart)&apos; lub ustaw format 
         <translation>Wielokąt</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>&amp;Rączka</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Przeciągnij lewym przyciskiem, aby przesunąć widok, bez edycji kształtów</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>Prostokąt</translation>
     </message>
@@ -692,6 +696,10 @@ Zmień model AI Text-to-Annotation na &apos;SAM3 (smart)&apos; lub ustaw format 
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>Narysuj ramkę ograniczającą, aby segmentować obiekt.</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>Kółko powiększa obszar roboczy • Shift+Kółko przesuwa go w bok</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

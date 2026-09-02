@@ -105,6 +105,10 @@
         <translation>Editando formas</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>Mano: arrastra para desplazar • H o ESC para salir</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>Haz clic en el punto inicial de la línea</translation>
     </message>
@@ -430,10 +434,6 @@ Shapes</source>
         <translation>Mostrar página del tutorial</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>Zoom</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>&amp;Acercar</translation>
     </message>
@@ -496,10 +496,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>Rellenar polígono mientras se dibuja</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+Rueda hace zoom en el lienzo</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -658,6 +654,14 @@ Cambie el modelo de AI Text-to-Annotation a &apos;SAM3 (smart)&apos; o establezc
         <translation>Polígono</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>&amp;Mano</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Arrastra con el botón izquierdo para desplazar, sin editar formas</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>Rectángulo</translation>
     </message>
@@ -692,6 +696,10 @@ Cambie el modelo de AI Text-to-Annotation a &apos;SAM3 (smart)&apos; o establezc
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>Dibuje un cuadro delimitador para segmentar el objeto.</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>La rueda amplía el lienzo • Mayús+Rueda lo desplaza lateralmente</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

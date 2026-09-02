@@ -501,28 +501,64 @@ def _make_wheel_event(
 
 @pytest.mark.gui
 @pytest.mark.parametrize(
-    ("modifiers", "angle_delta", "signal_attr", "expected_orientation"),
+    (
+        "modifiers",
+        "angle_delta",
+        "signal_attr",
+        "expected_orientation",
+        "expected_delta",
+    ),
     [
         pytest.param(
             Qt.KeyboardModifier.ControlModifier,
             QPoint(0, 120),
             "zoom_request",
             None,
+            120,
             id="ctrl_zoom",
         ),
         pytest.param(
             Qt.KeyboardModifier.NoModifier,
             QPoint(0, 120),
+            "zoom_request",
+            None,
+            120,
+            id="plain_zoom",
+        ),
+        pytest.param(
+            # A trackpad leaks a little sideways travel into a vertical swipe;
+            # the dominant axis still means zoom.
+            Qt.KeyboardModifier.NoModifier,
+            QPoint(18, 120),
+            "zoom_request",
+            None,
+            120,
+            id="plain_diagonal_zoom",
+        ),
+        pytest.param(
+            Qt.KeyboardModifier.NoModifier,
+            QPoint(120, 0),
             "scroll_request",
-            Qt.Orientation.Vertical,
-            id="plain_scroll",
+            Qt.Orientation.Horizontal,
+            120,
+            id="plain_horizontal_scroll",
         ),
         pytest.param(
             Qt.KeyboardModifier.ShiftModifier,
             QPoint(0, 120),
             "scroll_request",
             Qt.Orientation.Horizontal,
+            120,
             id="shift_horizontal_scroll",
+        ),
+        pytest.param(
+            # macOS hands Shift+wheel over on the x axis already.
+            Qt.KeyboardModifier.ShiftModifier,
+            QPoint(120, 0),
+            "scroll_request",
+            Qt.Orientation.Horizontal,
+            120,
+            id="shift_horizontal_scroll_native_axis",
         ),
     ],
 )
@@ -535,6 +571,7 @@ def test_canvas_wheel_event_dispatches_signal(
     angle_delta: QPoint,
     signal_attr: str,
     expected_orientation: Qt.Orientation | None,
+    expected_delta: int,
 ) -> None:
     canvas = _win._canvas_widgets.canvas
     captured: list[tuple[object, ...]] = []
@@ -551,22 +588,34 @@ def test_canvas_wheel_event_dispatches_signal(
     )
 
     assert captured, f"{signal_attr} was not emitted"
-    if expected_orientation is not None:
-        # The plain-scroll branch emits an empty horizontal step (delta.x() == 0)
-        # before the real vertical one, so filter to non-zero deltas. There must
-        # be exactly one non-zero emission, on the expected axis, carrying the
-        # full angle_delta.y(). Anything looser would silently pass if the
-        # canvas dropped the real emission and only kept the zero step.
+    if expected_orientation is None:
+        # zoom_request carries the anchor rather than an orientation; pin the
+        # notch so a half-spent accumulator cannot pass unnoticed.
+        assert [args[0] for args in captured] == [expected_delta]
+    else:
+        # A scroll branch may emit an empty step (delta == 0) alongside the real
+        # one, so filter to non-zero deltas. There must be exactly one non-zero
+        # emission, on the expected axis, carrying the full delta. Anything
+        # looser would silently pass if the canvas dropped the real emission and
+        # only kept the zero step.
         non_zero = [args for args in captured if args[0] != 0]
         assert len(non_zero) == 1, (
             f"{signal_attr} expected exactly one non-zero emission, got {non_zero!r}"
         )
-        assert non_zero[0] == (angle_delta.y(), expected_orientation)
+        assert non_zero[0] == (expected_delta, expected_orientation)
 
     close_or_pause(qtbot=qtbot, widget=_win, pause=pause)
 
 
 @pytest.mark.gui
+@pytest.mark.parametrize(
+    "modifiers",
+    [
+        pytest.param(Qt.KeyboardModifier.ControlModifier, id="ctrl"),
+        pytest.param(Qt.KeyboardModifier.NoModifier, id="bare"),
+        pytest.param(Qt.KeyboardModifier.ShiftModifier, id="shift"),
+    ],
+)
 @pytest.mark.parametrize(
     ("angle_delta", "phase"),
     [
@@ -576,6 +625,12 @@ def test_canvas_wheel_event_dispatches_signal(
             Qt.ScrollPhase.NoScrollPhase,
             id="horizontal_only",
         ),
+        pytest.param(
+            # Sideways travel dominates, so this is a pan gesture, not a zoom.
+            QPoint(120, 18),
+            Qt.ScrollPhase.NoScrollPhase,
+            id="horizontal_dominant",
+        ),
     ],
 )
 def test_canvas_wheel_event_ignores_non_vertical_zoom(
@@ -583,6 +638,7 @@ def test_canvas_wheel_event_ignores_non_vertical_zoom(
     qtbot: QtBot,
     _win: MainWindow,
     pause: bool,
+    modifiers: Qt.KeyboardModifier,
     angle_delta: QPoint,
     phase: Qt.ScrollPhase,
 ) -> None:
@@ -593,10 +649,52 @@ def test_canvas_wheel_event_ignores_non_vertical_zoom(
             _make_wheel_event(
                 pos=QPointF(canvas.width() / 2, canvas.height() / 2),
                 angle_delta=angle_delta,
-                modifiers=Qt.KeyboardModifier.ControlModifier,
+                modifiers=modifiers,
                 phase=phase,
             )
         )
+
+    close_or_pause(qtbot=qtbot, widget=_win, pause=pause)
+
+
+@pytest.mark.gui
+def test_wheel_zoom_banks_trackpad_deltas_into_whole_notches(
+    *,
+    qtbot: QtBot,
+    _win: MainWindow,
+    pause: bool,
+) -> None:
+    # A trackpad swipe arrives as a stream of small deltas. Spending a zoom
+    # step on each one would rocket the scale away, so they must add up to one
+    # notch before anything happens.
+    canvas = _win._canvas_widgets.canvas
+    pos = QPointF(canvas.width() / 2, canvas.height() / 2)
+    captured: list[int] = []
+    canvas.zoom_request.connect(lambda delta, _pos: captured.append(delta))
+
+    def swipe(*, delta_y: int, times: int) -> None:
+        for _ in range(times):
+            canvas.wheelEvent(
+                _make_wheel_event(
+                    pos=pos,
+                    angle_delta=QPoint(0, delta_y),
+                    modifiers=Qt.KeyboardModifier.NoModifier,
+                    phase=Qt.ScrollPhase.NoScrollPhase,
+                )
+            )
+
+    swipe(delta_y=10, times=11)
+    assert captured == [], "a partial notch must not zoom"
+
+    swipe(delta_y=10, times=1)
+    assert captured == [120]
+
+    # Reversing direction drops the banked travel instead of carrying it over.
+    swipe(delta_y=10, times=6)
+    swipe(delta_y=-10, times=11)
+    assert captured == [120]
+    swipe(delta_y=-10, times=1)
+    assert captured == [120, -120]
 
     close_or_pause(qtbot=qtbot, widget=_win, pause=pause)
 
@@ -651,5 +749,47 @@ def test_ctrl_wheel_keeps_image_point_under_cursor(
         after = _get_image_point_under_cursor()
         assert after.x() == pytest.approx(before.x(), abs=0.01)
         assert after.y() == pytest.approx(before.y(), abs=0.01)
+
+    close_or_pause(qtbot=qtbot, widget=win, pause=pause)
+
+
+@pytest.mark.gui
+@pytest.mark.parametrize(
+    ("key", "text"),
+    [
+        pytest.param(Qt.Key.Key_Minus, "-", id="minus"),
+        pytest.param(Qt.Key.Key_Plus, "+", id="plus"),
+        pytest.param(Qt.Key.Key_Equal, "=", id="equal"),
+    ],
+)
+def test_typing_a_zoom_key_into_the_file_search_box_does_not_zoom(
+    *,
+    main_win: MainWinFactory,
+    qtbot: QtBot,
+    data_path: Path,
+    pause: bool,
+    key: Qt.Key,
+    text: str,
+) -> None:
+    # The bare zoom keys are window-wide shortcuts, and Qt offers a shortcut
+    # its key before the focus widget ever sees it. A filename like "img-001"
+    # has to reach the search box instead of stepping the zoom.
+    win = main_win(file_or_dir=str(data_path / "annotated"))
+    show_window_and_wait_for_imagedata(qtbot=qtbot, win=win)
+
+    file_search = win._docks.file_search
+    file_search.setFocus()
+    qtbot.waitUntil(lambda: file_search.hasFocus())
+    zoom_before = win._canvas_widgets.zoom_widget.value()
+
+    # Route through the focus widget rather than the line edit directly, so
+    # the shortcut machinery gets its usual first refusal.
+    focused = QtWidgets.QApplication.focusWidget()
+    assert focused is not None
+    qtbot.keyClick(focused, key)
+    qtbot.wait(50)
+
+    assert file_search.text() == text
+    assert win._canvas_widgets.zoom_widget.value() == zoom_before
 
     close_or_pause(qtbot=qtbot, widget=win, pause=pause)

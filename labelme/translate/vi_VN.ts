@@ -105,6 +105,10 @@
         <translation>Chỉnh sửa hình dạng</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>Bàn tay: kéo để di chuyển • H hoặc ESC để thoát</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>Nhấn điểm bắt đầu cho đường thẳng</translation>
     </message>
@@ -430,10 +434,6 @@ Shapes</source>
         <translation>Hiển thị trang hướng dẫn</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>Thu phóng</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>Phóng to(&amp;I)</translation>
     </message>
@@ -496,10 +496,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>Tô đa giác khi vẽ</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+Bánh xe phóng to/thu nhỏ canvas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -658,6 +654,14 @@ Chuyển mô hình AI Text-to-Annotation sang &apos;SAM3 (smart)&apos;, hoặc �
         <translation>Đa giác</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>&amp;Bàn tay</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Kéo bằng nút trái để di chuyển khung nhìn, không chỉnh sửa hình</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>Hình chữ nhật</translation>
     </message>
@@ -692,6 +696,10 @@ Chuyển mô hình AI Text-to-Annotation sang &apos;SAM3 (smart)&apos;, hoặc �
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>Vẽ một hộp giới hạn để phân đoạn đối tượng.</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>Con lăn phóng to khung vẽ • Shift+Con lăn di chuyển ngang</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

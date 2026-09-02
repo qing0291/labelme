@@ -105,6 +105,10 @@
         <translation>Modifica delle forme</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>Mano: trascina per spostare • H o ESC per uscire</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>Clicca sul punto di partenza della linea</translation>
     </message>
@@ -436,10 +440,6 @@ forme</translation>
         <translation>Mostra la pagina del tutorial</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>Zoom</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>Zoom &amp;avanti</translation>
     </message>
@@ -502,10 +502,6 @@ forme</translation>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>Riempire il poligono durante il disegno</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+Rotella ingrandisce la tela</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -664,6 +660,14 @@ Cambia il modello AI Text-to-Annotation in &apos;SAM3 (smart)&apos; oppure impos
         <translation>Poligono</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>&amp;Mano</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Trascina con il pulsante sinistro per spostare, senza modificare le forme</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>Rettangolo</translation>
     </message>
@@ -698,6 +702,10 @@ Cambia il modello AI Text-to-Annotation in &apos;SAM3 (smart)&apos; oppure impos
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>Disegnare un riquadro di delimitazione per segmentare l&apos;oggetto.</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>La rotellina ingrandisce la tela • Maiusc+Rotellina la sposta lateralmente</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

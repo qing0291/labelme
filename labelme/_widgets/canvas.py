@@ -53,6 +53,9 @@ _MIN_POINTS_FOR_FILL_PREVIEW: Final = 2
 _DEFAULT_SHAPE_RGB: Final[tuple[int, int, int]] = (0, 255, 0)
 _DEFAULT_PALETTE: Final[Palette] = Palette.from_rgb(_DEFAULT_SHAPE_RGB)
 
+# One wheel notch in eighths of a degree, the unit QWheelEvent.angleDelta uses.
+_WHEEL_ZOOM_NOTCH: Final = 120
+
 
 @dataclasses.dataclass(frozen=True)
 class _DraftShape:
@@ -193,6 +196,7 @@ class Canvas(QtWidgets.QWidget):
     edge_selected = QtCore.Signal(bool)
     mouse_moved = QtCore.Signal(QPointF)
     status_updated = QtCore.Signal(str)
+    hand_mode_changed = QtCore.Signal(bool)
 
     mode: _CanvasMode = _CanvasMode.EDIT
 
@@ -210,6 +214,8 @@ class Canvas(QtWidgets.QWidget):
     _rotation_original_points: np.ndarray
 
     _pan_anchor: QPointF | None
+    _hand_mode: bool
+    _wheel_zoom_travel: int
 
     _highlight: VertexHighlight | None
     _rotation_highlight: VertexHighlight | None
@@ -251,6 +257,8 @@ class Canvas(QtWidgets.QWidget):
         super().__init__(*args, **kwargs)
 
         self._cursor = CursorRole.DEFAULT
+        self._hand_mode = False
+        self._wheel_zoom_travel = 0
         self.reset_state()
 
         # self._line represents:
@@ -544,7 +552,8 @@ class Canvas(QtWidgets.QWidget):
         self._update_status(extra_messages=None)
 
     def focusOutEvent(self, _a0: QtGui.QFocusEvent, /) -> None:
-        self._release_cursor()
+        self._finish_pan()
+        self._reset_wheel_zoom()
         self._update_status(extra_messages=None)
 
     def set_editing(self, *, value: bool = True) -> None:
@@ -566,6 +575,30 @@ class Canvas(QtWidgets.QWidget):
             need_update |= self.deselect_shape()
             if need_update:
                 self.update()
+
+    def is_hand_mode(self) -> bool:
+        return self._hand_mode
+
+    def set_hand_mode(self, *, value: bool) -> bool:
+        """Toggle the pan overlay, returning whether it is active afterwards.
+
+        Hand mode sits on top of the current edit/create mode rather than
+        replacing it, so leaving it restores whatever tool was already
+        selected.
+        """
+        if value and self._current is not None:
+            # An unfinished shape owns the left button; taking it away would
+            # strand the shape with no way to finish or cancel it.
+            return self._hand_mode
+        if value == self._hand_mode:
+            return self._hand_mode
+        self._hand_mode = value
+        self._finish_pan()
+        if value:
+            self._apply_cursor(CursorRole.GRAB)
+        self.hand_mode_changed.emit(value)
+        self._update_status(extra_messages=None)
+        return value
 
     def _set_highlight(
         self,
@@ -617,6 +650,8 @@ class Canvas(QtWidgets.QWidget):
         else:
             assert self.mode == _CanvasMode.EDIT
             messages.append(self.tr("Editing shapes"))
+        if self._hand_mode:
+            messages.append(self.tr("Hand: drag to pan • H or ESC to exit"))
         if extra_messages:
             messages.extend(extra_messages)
         self.status_updated.emit(" • ".join(messages))
@@ -677,6 +712,9 @@ class Canvas(QtWidgets.QWidget):
     def _dispatch_pointer_move(self, *, pos: QPointF, event: QtGui.QMouseEvent) -> None:
         if self._pan_anchor is not None:
             self._advance_pan(event=event)
+            return
+        if self._hand_mode:
+            self._apply_cursor(CursorRole.GRAB)
             return
         if self.mode == _CanvasMode.CREATE:
             self._track_drawing_cursor(pos=pos, event=event)
@@ -1030,16 +1068,20 @@ class Canvas(QtWidgets.QWidget):
     ) -> None:
         self._clear_ai_existing_shape_highlights()
         button = event.button()
+        if self._hand_mode and button == Qt.MouseButton.LeftButton:
+            # Intercepted ahead of every shape path, so panning can neither
+            # create, select, move nor dirty anything.
+            if self._can_pan():
+                self._begin_pan(event=event, cursor=CursorRole.MOVE)
+            return
         if button == Qt.MouseButton.LeftButton:
             self._press_left(pos=pos, event=event)
             return
         if button == Qt.MouseButton.RightButton and self.mode == _CanvasMode.EDIT:
             self._press_right(pos=pos, event=event)
             return
-        if button == Qt.MouseButton.MiddleButton and (
-            self._is_image_overflowing_viewport() or not self._view_offset.isNull()
-        ):
-            self._begin_pan(event=event)
+        if button == Qt.MouseButton.MiddleButton and self._can_pan():
+            self._begin_pan(event=event, cursor=CursorRole.GRAB)
 
     def _press_left(self, *, pos: QPointF, event: QtGui.QMouseEvent) -> None:
         is_shift_pressed = bool(event.modifiers() & Qt.KeyboardModifier.ShiftModifier)
@@ -1222,9 +1264,12 @@ class Canvas(QtWidgets.QWidget):
             self.update()
         self._prev_point = pos
 
-    def _begin_pan(self, *, event: QtGui.QMouseEvent) -> None:
-        self._apply_cursor(CursorRole.GRAB)
+    def _begin_pan(self, *, event: QtGui.QMouseEvent, cursor: CursorRole) -> None:
+        self._apply_cursor(cursor)
         self._pan_anchor = QPointF(self.mapToGlobal(event.position().toPoint()))
+
+    def _can_pan(self) -> bool:
+        return self._is_image_overflowing_viewport() or not self._view_offset.isNull()
 
     def mouseReleaseEvent(self, a0: QtGui.QMouseEvent, /) -> None:
         self._dispatch_pointer_release(event=a0)
@@ -1233,6 +1278,10 @@ class Canvas(QtWidgets.QWidget):
 
     def _dispatch_pointer_release(self, *, event: QtGui.QMouseEvent) -> None:
         button = event.button()
+        if self._hand_mode and button == Qt.MouseButton.LeftButton:
+            self._finish_pan()
+            self._apply_cursor(CursorRole.GRAB)
+            return
         if button == Qt.MouseButton.RightButton:
             self._release_right(event=event)
             return
@@ -1871,21 +1920,49 @@ class Canvas(QtWidgets.QWidget):
         if delta.isNull():
             a0.accept()
             return
-        if mods == Qt.KeyboardModifier.ControlModifier:
-            # with Ctrl/Command key
-            # zoom
-            if delta.y() != 0:
-                self.zoom_request.emit(delta.y(), a0.position())
-        elif mods == Qt.KeyboardModifier.ShiftModifier and delta.x() == 0:
-            # Shift+wheel scrolls horizontally. macOS swaps the axis for us,
-            # but Linux/Windows deliver the delta on y and expect the app to
-            # remap it.
-            self.scroll_request.emit(delta.y(), Qt.Orientation.Horizontal)
+        if mods == Qt.KeyboardModifier.ShiftModifier:
+            # Shift+wheel scrolls horizontally and never zooms. macOS swaps the
+            # axis for us, but Linux/Windows deliver the delta on y and expect
+            # the app to remap it, so take whichever axis carries the travel.
+            self._reset_wheel_zoom()
+            self.scroll_request.emit(delta.x() or delta.y(), Qt.Orientation.Horizontal)
+        elif mods in (
+            Qt.KeyboardModifier.NoModifier,
+            Qt.KeyboardModifier.ControlModifier,
+        ):
+            # A bare wheel zooms, as does Ctrl/Command+wheel. Trackpads and
+            # free-spinning wheels leak travel onto the other axis, so the
+            # dominant axis decides rather than an exact zero.
+            if abs(delta.y()) > abs(delta.x()):
+                self._accumulate_wheel_zoom(delta=delta.y(), pos=a0.position())
+            elif mods == Qt.KeyboardModifier.NoModifier:
+                self._reset_wheel_zoom()
+                self.scroll_request.emit(delta.x(), Qt.Orientation.Horizontal)
         else:
             # scroll
+            self._reset_wheel_zoom()
             self.scroll_request.emit(delta.x(), Qt.Orientation.Horizontal)
             self.scroll_request.emit(delta.y(), Qt.Orientation.Vertical)
         a0.accept()
+
+    def _accumulate_wheel_zoom(self, *, delta: int, pos: QPointF) -> None:
+        # A trackpad flick arrives as dozens of small deltas. Spending a whole
+        # zoom step on each one would rocket the scale away, so bank the travel
+        # and spend it one notch at a time.
+        if self._wheel_zoom_travel * delta < 0:
+            # Reversed mid-gesture; drop the banked travel so the new direction
+            # does not inherit it.
+            self._wheel_zoom_travel = 0
+        self._wheel_zoom_travel += delta
+        while abs(self._wheel_zoom_travel) >= _WHEEL_ZOOM_NOTCH:
+            notch = (
+                _WHEEL_ZOOM_NOTCH if self._wheel_zoom_travel > 0 else -_WHEEL_ZOOM_NOTCH
+            )
+            self._wheel_zoom_travel -= notch
+            self.zoom_request.emit(notch, pos)
+
+    def _reset_wheel_zoom(self) -> None:
+        self._wheel_zoom_travel = 0
 
     def _move_by_keyboard(self, *, offset: QPointF) -> None:
         if not self.selected_shapes:
@@ -1902,6 +1979,13 @@ class Canvas(QtWidgets.QWidget):
         self._clear_ai_existing_shape_highlights()
         modifiers = a0.modifiers()
         key = a0.key()
+        if self._hand_mode:
+            # Hand mode holds no unfinished shape, so ESC is free to mean
+            # "leave the overlay" without touching the create-mode meaning.
+            if key == Qt.Key.Key_Escape:
+                self.set_hand_mode(value=False)
+            self._update_status(extra_messages=None)
+            return
         if self.mode == _CanvasMode.CREATE:
             if key == Qt.Key.Key_Escape and self._current is not None:
                 self._cancel_current_shape()
@@ -2064,6 +2148,8 @@ class Canvas(QtWidgets.QWidget):
 
     def reset_state(self) -> None:
         self._release_cursor()
+        self._pan_anchor = None
+        self._wheel_zoom_travel = 0
         self.pixmap = QtGui.QPixmap()
         self._pixmap_hash = None
         self.shapes = []

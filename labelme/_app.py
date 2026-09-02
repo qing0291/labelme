@@ -137,6 +137,7 @@ class _Actions(NamedTuple):
     remove_point: QtGui.QAction
     create_mode: QtGui.QAction
     edit_mode: QtGui.QAction
+    hand: QtGui.QAction
     create_rectangle_mode: QtGui.QAction
     create_oriented_rectangle_mode: QtGui.QAction
     create_circle_mode: QtGui.QAction
@@ -515,6 +516,15 @@ class MainWindow(QtWidgets.QMainWindow):
             tip=self.tr("Move and edit the selected shapes"),
             enabled=False,
         )
+        hand = action(
+            text=self.tr("&Hand"),
+            slot=self.set_hand_mode,
+            shortcut=shortcuts["hand"],
+            icon="hand.svg",
+            tip=self.tr("Drag with the left button to pan, without editing shapes"),
+            checkable=True,
+            enabled=False,
+        )
         create_rectangle_mode = action(
             text=self.tr("Rectangle"),
             slot=lambda: self._switch_canvas_mode(edit=False, create_mode="rectangle"),
@@ -700,15 +710,16 @@ class MainWindow(QtWidgets.QMainWindow):
         )
 
         zoom_widget_action = QtWidgets.QWidgetAction(self)
-        zoom_box_layout = QtWidgets.QVBoxLayout()
-        zoom_label = QtWidgets.QLabel(self.tr("Zoom"))
-        zoom_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        zoom_box_layout.addWidget(zoom_label)
+        zoom_box_layout = QtWidgets.QHBoxLayout()
+        zoom_box_layout.setContentsMargins(0, 0, 0, 0)
+        zoom_box_layout.setSpacing(0)
+        zoom_box_layout.addWidget(_new_zoom_step_button(zoom_out))
         zoom_box_layout.addWidget(self._canvas_widgets.zoom_widget)
+        zoom_box_layout.addWidget(_new_zoom_step_button(zoom_in))
         zoom_widget_action.setDefaultWidget(QtWidgets.QWidget())
         zoom_widget_action.defaultWidget().setLayout(zoom_box_layout)
         self._canvas_widgets.zoom_widget.setToolTip(
-            self.tr("Ctrl+Wheel zooms the canvas")
+            self.tr("Wheel zooms the canvas • Shift+Wheel pans it sideways")
         )
         self._canvas_widgets.zoom_widget.setEnabled(False)
 
@@ -739,6 +750,7 @@ class MainWindow(QtWidgets.QMainWindow):
         )
         on_load_active = (
             close,
+            hand,
             create_mode,
             create_rectangle_mode,
             create_oriented_rectangle_mode,
@@ -776,6 +788,7 @@ class MainWindow(QtWidgets.QMainWindow):
             None,
             remove_point,
             None,
+            hand,
             keep_prev_action,
         )
         return _Actions(
@@ -801,6 +814,7 @@ class MainWindow(QtWidgets.QMainWindow):
             add_point_to_edge=add_point_to_edge,
             create_mode=create_mode,
             edit_mode=edit_mode,
+            hand=hand,
             create_rectangle_mode=create_rectangle_mode,
             create_oriented_rectangle_mode=create_oriented_rectangle_mode,
             create_circle_mode=create_circle_mode,
@@ -970,6 +984,7 @@ class MainWindow(QtWidgets.QMainWindow):
                     self._actions.delete_file,
                     None,
                     self._actions.edit_mode,
+                    self._actions.hand,
                     self._actions.duplicate,
                     self._actions.delete,
                     self._actions.undo,
@@ -1146,6 +1161,7 @@ class MainWindow(QtWidgets.QMainWindow):
         canvas.shape_moved.connect(self.mark_dirty)
         canvas.selection_changed.connect(self._on_shape_selection_changed)
         canvas.drawing_polygon.connect(self._on_drawing_polygon_changed)
+        canvas.hand_mode_changed.connect(self._on_hand_mode_changed)
 
         self.setCentralWidget(scroll_area)
 
@@ -1507,9 +1523,19 @@ class MainWindow(QtWidgets.QMainWindow):
         url = "https://github.com/labelmeai/labelme/tree/main/examples/tutorial"  # NOQA
         webbrowser.open(url)
 
+    def set_hand_mode(self, value: bool = True, /) -> None:  # noqa: FBT001, FBT002 -- QAction.triggered slot
+        # The canvas refuses to grab the left button away from an unfinished
+        # shape, so mirror back whatever it settled on.
+        active = self._canvas_widgets.canvas.set_hand_mode(value=value)
+        self._actions.hand.setChecked(active)
+
+    def _on_hand_mode_changed(self, active: bool, /) -> None:  # noqa: FBT001 -- Canvas.hand_mode_changed slot
+        self._actions.hand.setChecked(active)
+
     def _on_drawing_polygon_changed(self, drawing: bool, /) -> None:  # noqa: FBT001 -- Canvas.drawing_polygon slot
         # In the middle of drawing, toggling between modes should be disabled.
         self._actions.edit_mode.setEnabled(not drawing)
+        self._actions.hand.setEnabled(not drawing)
         self._actions.undo_last_point.setEnabled(drawing)
         self._actions.undo.setEnabled(
             not drawing and self._canvas_widgets.canvas.can_restore_shape
@@ -1517,6 +1543,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self._actions.delete.setEnabled(not drawing)
 
     def _switch_canvas_mode(self, *, edit: bool, create_mode: str | None) -> None:
+        self.set_hand_mode(False)  # noqa: FBT003 -- positional-only slot signature
         self._canvas_widgets.canvas.set_editing(value=edit)
         if create_mode is not None:
             self._canvas_widgets.canvas.create_mode = create_mode
@@ -3113,6 +3140,14 @@ class MainWindow(QtWidgets.QMainWindow):
         stats.append(f"mode={self._canvas_widgets.canvas.mode.name}")
         stats.append(f"x={mouse_pos.x():6.1f}, y={mouse_pos.y():6.1f}")
         self._status_bar.stats.setText(" | ".join(stats))
+
+
+def _new_zoom_step_button(action: QtGui.QAction, /) -> QtWidgets.QToolButton:
+    button = QtWidgets.QToolButton()
+    button.setDefaultAction(action)
+    button.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonIconOnly)
+    button.setAutoRaise(True)
+    return button
 
 
 def _shapes_from_dicts(

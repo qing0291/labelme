@@ -105,6 +105,10 @@
         <translation>도형 편집 중</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>손: 드래그하여 이동 • H 또는 ESC로 종료</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>선의 시작점 클릭</translation>
     </message>
@@ -430,10 +434,6 @@ Shapes</source>
         <translation>튜토리얼 페이지 표시</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>확대/축소</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>확대(&amp;I)</translation>
     </message>
@@ -496,10 +496,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>그리는 동안 다각형 채우기</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+휠로 캔버스를 확대/축소합니다</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -658,6 +654,14 @@ AI Text-to-Annotation 모델을 &apos;SAM3 (smart)&apos;(으)로 변경하거나
         <translation>다각형</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>손(&amp;H)</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>왼쪽 버튼으로 드래그하여 도형을 편집하지 않고 화면을 이동합니다</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>사각형</translation>
     </message>
@@ -692,6 +696,10 @@ AI Text-to-Annotation 모델을 &apos;SAM3 (smart)&apos;(으)로 변경하거나
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>바운딩 박스를 그려서 객체를 세그먼트.</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>휠로 캔버스 확대/축소 • Shift+휠로 좌우 이동</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

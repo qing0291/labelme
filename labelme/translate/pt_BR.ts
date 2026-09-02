@@ -105,6 +105,10 @@
         <translation>Editando formas</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>Mão: arraste para deslocar • H ou ESC para sair</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>Clique no ponto inicial da linha</translation>
     </message>
@@ -430,10 +434,6 @@ Shapes</source>
         <translation>Mostrar página do tutorial</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>Zoom</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>&amp;Aproximar</translation>
     </message>
@@ -496,10 +496,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>Preencher polígono enquanto desenha</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+Roda amplia a tela</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -658,6 +654,14 @@ Mude o modelo de AI Text-to-Annotation para &apos;SAM3 (smart)&apos; ou defina o
         <translation>Polígono</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>&amp;Mão</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Arraste com o botão esquerdo para deslocar, sem editar formas</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>Retângulo</translation>
     </message>
@@ -692,6 +696,10 @@ Mude o modelo de AI Text-to-Annotation para &apos;SAM3 (smart)&apos; ou defina o
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>Desenhe uma caixa delimitadora para segmentar o objeto.</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>A roda amplia a tela • Shift+Roda a desloca lateralmente</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

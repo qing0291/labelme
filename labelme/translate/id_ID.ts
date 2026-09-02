@@ -105,6 +105,10 @@
         <translation>Mengedit bentuk</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>Tangan: seret untuk menggeser • H atau ESC untuk keluar</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>Klik titik awal untuk garis</translation>
     </message>
@@ -405,10 +409,6 @@
         <translation>Tampilkan halaman tutorial</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>Zoom</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>Perbesar (&amp;I)</translation>
     </message>
@@ -471,10 +471,6 @@
     <message>
         <source>Fill polygon while drawing</source>
         <translation>Isi poligon saat menggambar</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+Scroll melakukan zoom pada kanvas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -633,6 +629,14 @@ Ganti model AI Text-to-Annotation ke &apos;SAM3 (smart)&apos;, atau atur format 
         <translation>Poligon</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>&amp;Tangan</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Seret dengan tombol kiri untuk menggeser, tanpa mengedit bentuk</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>Persegi Panjang</translation>
     </message>
@@ -667,6 +671,10 @@ Ganti model AI Text-to-Annotation ke &apos;SAM3 (smart)&apos;, atau atur format 
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>Gambar bounding box untuk mensegmentasi objek.</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>Roda gulir memperbesar kanvas • Shift+Roda menggesernya ke samping</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

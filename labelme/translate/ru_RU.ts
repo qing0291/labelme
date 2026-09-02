@@ -105,6 +105,10 @@
         <translation>Редактирование фигур</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>Рука: перетаскивайте для сдвига • H или ESC для выхода</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>Нажмите начальную точку для линии</translation>
     </message>
@@ -415,10 +419,6 @@ Shapes</source>
         <translation>Показать страницу руководства</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>Масштаб</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>Увеличить (&amp;I)</translation>
     </message>
@@ -481,10 +481,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>Заполнять полигон во время рисования</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+Колесо масштабирует холст</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -661,6 +657,14 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
         <translation>Полигон</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>&amp;Рука</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Перетаскивайте левой кнопкой, чтобы сдвинуть вид, не изменяя фигуры</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>Прямоугольник</translation>
     </message>
@@ -695,6 +699,10 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>Нарисуйте ограничивающую рамку для сегментации объекта.</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>Колесо масштабирует холст • Shift+Колесо сдвигает его вбок</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

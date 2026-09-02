@@ -97,6 +97,10 @@
         <translation>Επεξεργασία σχημάτων</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>Χέρι: σύρετε για μετακίνηση • H ή ESC για έξοδο</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>Κάντε κλικ στο σημείο έναρξης για τη γραμμή</translation>
     </message>
@@ -343,6 +347,14 @@
         <translation>Μετακίνηση και επεξεργασία των επιλεγμένων σχημάτων</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>&amp;Χέρι</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Σύρετε με το αριστερό κουμπί για μετακίνηση, χωρίς επεξεργασία σχημάτων</translation>
+    </message>
+    <message>
         <source>Start drawing rectangles</source>
         <translation>Ξεκινήστε να σχεδιάζετε ορθογώνια</translation>
     </message>
@@ -466,10 +478,6 @@ Shapes</source>
     <message>
         <source>Toggle all shapes</source>
         <translation>Εναλλαγή όλων των σχημάτων</translation>
-    </message>
-    <message>
-        <source>Zoom</source>
-        <translation>Εστίαση</translation>
     </message>
     <message>
         <source>&amp;Quit</source>
@@ -692,10 +700,6 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
         <translation>Σχεδιάστε ένα πλαίσιο οριοθέτησης για τμηματοποίηση αντικειμένου.</translation>
     </message>
     <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+Ροδέλα κάνει ζουμ στον καμβά</translation>
-    </message>
-    <message>
         <source>AI-Points Unavailable</source>
         <translation>AI-Points μη διαθέσιμο</translation>
     </message>
@@ -720,6 +724,10 @@ Please select a different model or use AI-Box mode.</source>
     <message>
         <source>&amp;Keep Previous Zoom</source>
         <translation>&amp;Διατήρηση προηγούμενου ζουμ</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>Η ρόδα κάνει ζουμ στον καμβά • Shift+Ρόδα τον μετακινεί πλάγια</translation>
     </message>
     <message>
         <source>Permanently delete this label file? This action cannot be undone.</source>

@@ -97,6 +97,10 @@
         <translation>Редагування фігур</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>Рука: перетягуйте для зсуву • H або ESC для виходу</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>Натисніть початкову точку лінії</translation>
     </message>
@@ -343,6 +347,14 @@
         <translation>Перемістити і відредагувати вибрані фігури</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>&amp;Рука</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Перетягуйте лівою кнопкою, щоб зсунути вигляд, не змінюючи фігури</translation>
+    </message>
+    <message>
         <source>Start drawing rectangles</source>
         <translation>Почніть малювати прямокутники</translation>
     </message>
@@ -467,10 +479,6 @@ Shapes</source>
     <message>
         <source>Toggle all shapes</source>
         <translation>Переключити всі фігури</translation>
-    </message>
-    <message>
-        <source>Zoom</source>
-        <translation>Збільшити</translation>
     </message>
     <message>
         <source>&amp;Quit</source>
@@ -693,10 +701,6 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
         <translation>Намалюйте обмежувальну рамку для сегментації об&apos;єкта.</translation>
     </message>
     <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+колесо масштабує полотно</translation>
-    </message>
-    <message>
         <source>AI-Points Unavailable</source>
         <translation>AI-Points недоступний</translation>
     </message>
@@ -721,6 +725,10 @@ Please select a different model or use AI-Box mode.</source>
     <message>
         <source>&amp;Keep Previous Zoom</source>
         <translation>&amp;Зберегти попередній масштаб</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>Колесо масштабує полотно • Shift+Колесо зсуває його вбік</translation>
     </message>
     <message>
         <source>Permanently delete this label file? This action cannot be undone.</source>

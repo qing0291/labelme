@@ -105,6 +105,10 @@
         <translation>編輯形狀</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>手形：拖曳平移 • 按 H 或 ESC 離開</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>點擊線段起點</translation>
     </message>
@@ -430,10 +434,6 @@ Shapes</source>
         <translation>顯示教程網頁</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>縮放</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>放大(&amp;I)</translation>
     </message>
@@ -496,10 +496,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>繪製時填充多邊形</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+滾輪縮放畫布</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -658,6 +654,14 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
         <translation>多邊形</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>手形(&amp;H)</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>按住左鍵拖曳以平移畫布，不會編輯標註</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>矩形</translation>
     </message>
@@ -692,6 +696,10 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>繪製邊界框以分割物件。</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>滾輪縮放畫布 • Shift+滾輪橫向平移</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

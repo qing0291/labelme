@@ -105,6 +105,10 @@
         <translation>ویرایش اشکال</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>دست: برای جابه‌جایی بکشید • H یا ESC برای خروج</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>کلیک روی نقطه شروع خط</translation>
     </message>
@@ -430,10 +434,6 @@ Shapes</source>
         <translation>نمایش صفحه آموزش</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>زوم</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>بزرگ‌نمایی(&amp;I)</translation>
     </message>
@@ -496,10 +496,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>پر کردن چندضلعی هنگام رسم</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+چرخ روی بوم بزرگ‌نمایی می‌کند</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -658,6 +654,14 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
         <translation>چندضلعی</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>دست(&amp;H)</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>برای جابه‌جایی با دکمه چپ بکشید، بدون ویرایش شکل‌ها</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>مستطیل</translation>
     </message>
@@ -692,6 +696,10 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>یک کادر محصورکننده برای قطعه‌بندی شیء رسم کنید.</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>چرخ ماوس بوم را بزرگ‌نمایی می‌کند • Shift+چرخ آن را افقی جابه‌جا می‌کند</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

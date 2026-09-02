@@ -105,6 +105,10 @@
         <translation>Şekiller düzenleniyor</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>El: kaydırmak için sürükleyin • Çıkmak için H veya ESC</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>Çizginin başlangıç noktasına tıklayın</translation>
     </message>
@@ -433,10 +437,6 @@ Shapes</source>
         <translation>Öğretici sayfasını göster</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>Yakınlaştırma</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>&amp;Yakınlaştır</translation>
     </message>
@@ -499,10 +499,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>Çizim sırasında çokgeni doldur</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+Tekerlek tuvali yakınlaştırır</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -661,6 +657,14 @@ AI Text-to-Annotation modelini &apos;SAM3 (smart)&apos; olarak değiştirin veya
         <translation>Çokgen</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>&amp;El</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Şekilleri düzenlemeden görünümü kaydırmak için sol düğmeyle sürükleyin</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>Dikdörtgen</translation>
     </message>
@@ -695,6 +699,10 @@ AI Text-to-Annotation modelini &apos;SAM3 (smart)&apos; olarak değiştirin veya
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>Nesneyi bölütlemek için bir sınır kutusu çizin.</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>Tekerlek tuvali yakınlaştırır • Shift+Tekerlek yana kaydırır</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

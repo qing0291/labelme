@@ -97,6 +97,10 @@
         <translation>Alakzatok szerkesztése</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>Kéz: húzás a mozgatáshoz • H vagy ESC a kilépéshez</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>Kattintson a vonal kezdőpontjára</translation>
     </message>
@@ -316,6 +320,14 @@
         <translation>Sokszögek rajzolásának megkezdése</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>&amp;Kéz</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Húzza a bal gombbal a mozgatáshoz, alakzatok szerkesztése nélkül</translation>
+    </message>
+    <message>
         <source>Start drawing rectangles</source>
         <translation>Téglalapok rajzolásának megkezdése</translation>
     </message>
@@ -440,10 +452,6 @@ Shapes</source>
         <translation>Oktatóanyag oldal megjelenítése</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>Nagyítás</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>&amp;Nagyítás</translation>
     </message>
@@ -510,10 +518,6 @@ Shapes</source>
     <message>
         <source>Keep Previous Brightness/Contrast</source>
         <translation>Előző fényerő/kontraszt megtartása</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>A Ctrl+Görgő nagyítja a vásznat</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -698,6 +702,10 @@ Váltson az AI Text-to-Annotation modellnél &apos;SAM3 (smart)&apos;-re, vagy �
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>Rajzoljon befoglaló keretet az objektum szegmentálásához.</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>A görgő nagyítja a vásznat • Shift+Görgő oldalirányban mozgatja</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

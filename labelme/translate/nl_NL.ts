@@ -105,6 +105,10 @@
         <translation>Vormen bewerken</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>Hand: sleep om te verschuiven • H of ESC om te stoppen</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>Klik op startpunt voor lijn</translation>
     </message>
@@ -430,10 +434,6 @@ Shapes</source>
         <translation>Tutorialpagina tonen</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>Zoom</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>&amp;Inzoomen</translation>
     </message>
@@ -496,10 +496,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>Polygoon vullen tijdens tekenen</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+Wiel zoomt op het canvas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -658,6 +654,14 @@ Wijzig het AI Text-to-Annotation-model naar &apos;SAM3 (smart)&apos; of stel het
         <translation>Polygoon</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>&amp;Hand</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>Sleep met de linkerknop om te verschuiven, zonder vormen te bewerken</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>Rechthoek</translation>
     </message>
@@ -692,6 +696,10 @@ Wijzig het AI Text-to-Annotation-model naar &apos;SAM3 (smart)&apos; of stel het
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>Teken een begrenzingskader om een object te segmenteren.</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>Muiswiel zoomt het canvas • Shift+Muiswiel verschuift het zijwaarts</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

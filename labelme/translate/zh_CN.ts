@@ -105,6 +105,10 @@
         <translation>正在编辑形状</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>抓手：拖动平移 • 按 H 或 ESC 退出</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>单击确定直线起点</translation>
     </message>
@@ -430,10 +434,6 @@ Shapes</source>
         <translation>打开教程页面</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>缩放</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>放大(&amp;I)</translation>
     </message>
@@ -496,10 +496,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>绘制过程中填充多边形</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+滚轮缩放画布</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -658,6 +654,14 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
         <translation>多边形</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>抓手(&amp;H)</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>按住左键拖动以平移画布，不会编辑标注</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>矩形</translation>
     </message>
@@ -692,6 +696,10 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>绘制边界框以分割对象。</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>滚轮缩放画布 • Shift+滚轮横向平移</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>

@@ -105,6 +105,10 @@
         <translation>แก้ไขรูปร่าง</translation>
     </message>
     <message>
+        <source>Hand: drag to pan • H or ESC to exit</source>
+        <translation>มือ: ลากเพื่อเลื่อน • H หรือ ESC เพื่อออก</translation>
+    </message>
+    <message>
         <source>Click start point for line</source>
         <translation>คลิกจุดเริ่มต้นของเส้น</translation>
     </message>
@@ -430,10 +434,6 @@ Shapes</source>
         <translation>แสดงหน้าบทแนะนำ</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>ซูม</translation>
-    </message>
-    <message>
         <source>Zoom &amp;In</source>
         <translation>ซูมเข้า (&amp;I)</translation>
     </message>
@@ -496,10 +496,6 @@ Shapes</source>
     <message>
         <source>Fill polygon while drawing</source>
         <translation>เติมสีหลายเหลี่ยมขณะวาด</translation>
-    </message>
-    <message>
-        <source>Ctrl+Wheel zooms the canvas</source>
-        <translation>Ctrl+ล้อเลื่อน เพื่อซูมแคนวาส</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -658,6 +654,14 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
         <translation>หลายเหลี่ยม</translation>
     </message>
     <message>
+        <source>&amp;Hand</source>
+        <translation>มือ (&amp;H)</translation>
+    </message>
+    <message>
+        <source>Drag with the left button to pan, without editing shapes</source>
+        <translation>ลากด้วยปุ่มซ้ายเพื่อเลื่อนภาพ โดยไม่แก้ไขรูปร่าง</translation>
+    </message>
+    <message>
         <source>Rectangle</source>
         <translation>สี่เหลี่ยม</translation>
     </message>
@@ -692,6 +696,10 @@ Switch the AI Text-to-Annotation model to &apos;SAM3 (smart)&apos;, or set the o
     <message>
         <source>Draw a bounding box to segment object.</source>
         <translation>วาดกรอบสี่เหลี่ยมเพื่อแบ่งส่วนวัตถุ</translation>
+    </message>
+    <message>
+        <source>Wheel zooms the canvas • Shift+Wheel pans it sideways</source>
+        <translation>ล้อเลื่อนใช้ซูมผืนผ้าใบ • Shift+ล้อเลื่อนใช้เลื่อนด้านข้าง</translation>
     </message>
     <message>
         <source>AI-Points Unavailable</source>
